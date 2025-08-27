@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(C:\\Users\\Admin\\.claude\\agents\\agent-definition/**)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
