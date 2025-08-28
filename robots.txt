@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai-coding-hub.infy.uk/sitemap.xml
+Sitemap: https://renegade2k6.github.io/ai-coding-hub/sitemap.xml
