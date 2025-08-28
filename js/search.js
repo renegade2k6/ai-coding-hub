@@ -1,5 +1,8 @@
 // Search functionality for AI Coding Hub
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.endsWith('contact.html')) {
+        return;
+    }
     // Create search input in header
     const searchContainer = document.createElement('div');
     searchContainer.className = 'search-container';

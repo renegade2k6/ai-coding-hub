@@ -45,8 +45,8 @@ class HeaderComponent {
 
     createLogo() {
         return `
-            <div style="display: flex; gap: 14px; align-items: center;">
-                <div class="logo" style="width: 44px; height: 44px; border-radius: 12px; position: relative; isolation: isolate; background: linear-gradient(180deg,#0f1d3e,#0a1328); box-shadow: inset 0 0 0 1px rgba(0,212,255,.35);" aria-hidden="true">
+            <div class="header-logo-container">
+                <div class="logo header-logo" aria-hidden="true">
                     <div style="position: absolute; inset: -2px; border-radius: 14px; background: conic-gradient(from 210deg, var(--accent), var(--accent-2), #0cf, var(--accent)); filter: blur(12px); opacity: .8; z-index: -1;"></div>
                 </div>
                 <h1>AI Coding Hub</h1>
