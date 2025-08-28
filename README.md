@@ -85,10 +85,6 @@ This website uses modern CSS features and works best in:
 - Safari 15+
 - Edge 90+
 
-## Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests to improve the tool database or enhance the theme.
-
 ## License
 
 This project is open source and available under the MIT License.

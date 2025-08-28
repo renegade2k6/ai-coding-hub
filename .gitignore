@@ -1,0 +1,12 @@
+node_modules/
+.claude/
+inbox/
+site/
+tools/
+*.log
+.DS_Store
+deploy.bat
+.github/
+package-lock.json
+package.json
+websites.md
