@@ -11,7 +11,7 @@ class FooterComponent {
                 <div class="container">
                     <p>&copy; 2025 AI Coding Hub. All rights reserved.</p>
                     <p>Created by <a href="https://www.patreon.com/renegade2k6UK" target="_blank">Renegade2k6</a></p>
-                    <p>Follow on <a href="https://x.com/Renegade2k6News" target="_blank">Twitter</a> | <a href="https://www.facebook.com/ren2k6" target="_blank">Facebook</a></p>
+                    <p>Follow on <a href="https://x.com/Renegade2k6News" target="_blank">X</a> | <a href="https://www.facebook.com/ren2k6" target="_blank">Facebook</a></p>
                     <div class="disclaimer">
                         <p><small>Disclaimer: This website is an independent project and is not affiliated with any of the tools or services listed. All product names, logos, and brands are property of their respective owners. We strive to keep information accurate and up-to-date, but recommend verifying details directly with tool providers.</small></p>
                     </div>
