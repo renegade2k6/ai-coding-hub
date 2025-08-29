@@ -2,58 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/agent-frameworks.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/browser-extensions.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/cli-tools.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/code-review.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/contact.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/extensions.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/ides.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/local-runtimes.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/agent-frameworks.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/model-providers.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/rag-tools.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/mcp.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/model-providers.html</loc>
-    <priority>0.80</priority>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/ides.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/rag-tools.html</loc>
-    <priority>0.80</priority>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/code-review.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/testing.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://renegade2k6.github.io/ai-coding-hub/pages/web-builders.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://renegade2k6.github.io/ai-coding-hub/pages/contact.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 </urlset>

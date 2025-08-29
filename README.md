@@ -20,8 +20,7 @@ A comprehensive directory of AI coding tools with a sleek, futuristic neon/glass
 5. **RAG Tools**: Retrieval-Augmented Generation tools for document understanding
 6. **Agent Frameworks**: Frameworks for building and orchestrating AI agents
 7. **Model Providers**: AI model providers and inference platforms
-8. **Browser Extensions**: AI extensions that work everywhere in your browser
-9. **MCP**: Model Context Protocol resources and documentation
+8. **MCP**: Model Context Protocol resources and documentation
 
 ## Technologies Used
 

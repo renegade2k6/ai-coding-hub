@@ -1,12 +1,27 @@
+# Only allow specific files and directories on GitHub
+# Everything else is ignored by default
+
+# Ignore all files first
+*
+
+# Then allow only the specified directories and files
+!assets/
+!assets/**
+!css/
+!css/**
+!js/
+!js/**
+!pages/
+!pages/**
+
+# Allow specific root files
+!README.md
+!index.html
+!robots.txt
+!sitemap.xml
+
+# Always ignore these
+.DS_Store
+*.log
 node_modules/
 .claude/
-inbox/
-site/
-tools/
-*.log
-.DS_Store
-deploy.bat
-.github/
-package-lock.json
-package.json
-websites.md

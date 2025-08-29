@@ -11,7 +11,6 @@ class HeaderComponent {
             { href: 'pages/rag-tools.html', label: 'RAG Tools', isActive: this.currentPage === 'rag-tools' },
             { href: 'pages/agent-frameworks.html', label: 'Agent Frameworks', isActive: this.currentPage === 'agent-frameworks' },
             { href: 'pages/model-providers.html', label: 'Model Providers', isActive: this.currentPage === 'model-providers' },
-            { href: 'pages/browser-extensions.html', label: 'Browser Extensions', isActive: this.currentPage === 'browser-extensions' },
             { href: 'pages/mcp.html', label: 'MCP', isActive: this.currentPage === 'mcp' },
             { href: 'pages/code-review.html', label: 'Code Review', isActive: this.currentPage === 'code-review' },
             { href: 'pages/testing.html', label: 'Testing', isActive: this.currentPage === 'testing' },
