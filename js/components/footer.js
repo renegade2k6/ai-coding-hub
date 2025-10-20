@@ -21,19 +21,52 @@ class FooterComponent {
     }
 
     mount(targetSelector = 'body') {
-        const target = document.querySelector(targetSelector);
-        if (target) {
-            // Appending to the body is standard for a footer
-            target.insertAdjacentHTML('beforeend', this.render());
+        const existingFooter = document.querySelector('footer');
+        if (existingFooter) {
+            // Update existing footer content instead of creating a new one
+            existingFooter.outerHTML = this.render();
+        } else {
+            // Create new footer if none exists
+            const target = document.querySelector(targetSelector);
+            if (target) {
+                target.insertAdjacentHTML('beforeend', this.render());
+            }
         }
     }
 }
 
 // Auto-initialize and mount the footer when the script is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const footer = new FooterComponent();
-    footer.mount('body');
-});
+// Optimized footer initialization to prevent flashing
+function initializeFooter() {
+  // Add loading class to prevent flashing
+  document.body.classList.add('footer-loading');
+  
+  const existingFooter = document.querySelector('footer');
+  if (existingFooter) {
+    // Update existing footer content with minimal disruption
+    const footerHTML = new FooterComponent().render();
+    existingFooter.innerHTML = footerHTML.innerHTML || footerHTML; // More graceful replacement
+  } else {
+    // Create new footer if none exists
+    const footerComponent = new FooterComponent();
+    footerComponent.mount('body');
+  }
+  
+  // Remove loading class after a brief delay to ensure smooth transition
+  setTimeout(() => {
+    document.body.classList.remove('footer-loading');
+  }, 100);
+}
+
+// Check if DOM is already loaded, if so initialize immediately
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeFooter();
+    });
+} else {
+    // DOM already loaded, initialize immediately
+    initializeFooter();
+}
 
 // Export for module systems (optional, but good practice)
 if (typeof module !== 'undefined' && module.exports) {

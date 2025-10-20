@@ -22,16 +22,16 @@
     <title>Local AI Model Runtimes 2025 - AI Coding Hub</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/pages/local-runtimes.html">
+    <script src="../js/components/header.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div style="display: flex; gap: 14px; align-items: center;">
-                <div class="logo" style="width: 44px; height: 44px; border-radius: 12px; position: relative; isolation: isolate; background: linear-gradient(180deg,#0f1d3e,#0a1328); box-shadow: inset 0 0 0 1px rgba(125,249,255,.25);" aria-hidden="true">
-                    <div style="position: absolute; inset: -2px; border-radius: 14px; background: conic-gradient(from 210deg, var(--accent), var(--accent-2), #0cf, var(--accent)); filter: blur(10px); opacity: .7; z-index: -1;"></div>
+            <div class="header-bar">
+                <div class="logo">
+                    <div class="logo-icon" aria-hidden="true"></div>
+                    <h1>AI Coding Hub</h1>
                 </div>
-                <h1>AI Coding Hub</h1>
-            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -52,7 +52,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
                 <h2>Local Model Runtimes & Desktop GUIs</h2>
@@ -134,6 +134,32 @@
                             <li>Native iOS and macOS integration</li>
                         </ul>
                         <a href="https://developer.apple.com/machine-learning/core-ml/" target="_blank" rel="noopener" class="btn btn-external">Visit Apple Core ML</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>vLLM</h4>
+                        <div class="tag">UC Berkeley</div>
+                        <p>High-throughput LLM serving engine with PagedAttention</p>
+                        <div class="latency">⚡⚡⚡⚡⚡</div>
+                        <div class="autonomy">Low</div>
+                        <ul>
+                            <li>PagedAttention for high throughput</li>
+                            <li>Continuous batching support</li>
+                            <li>Production-ready serving API</li>
+                        </ul>
+                        <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener" class="btn btn-external">Visit vLLM</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>TGI (Text Generation Inference)</h4>
+                        <div class="tag">Hugging Face</div>
+                        <p>Optimized inference solution for text generation models</p>
+                        <div class="latency">⚡⚡⚡⚡</div>
+                        <div class="autonomy">Low</div>
+                        <ul>
+                            <li>Optimized for Hugging Face Transformers</li>
+                            <li>Support for quantized models</li>
+                            <li>Docker-based deployment</li>
+                        </ul>
+                        <a href="https://github.com/huggingface/text-generation-inference" target="_blank" rel="noopener" class="btn btn-external">Visit TGI</a>
                     </div>
                     <div class="tool-card">
                         <h4>WebLLM</h4>
@@ -220,6 +246,32 @@
                             <li>Extensive customization</li>
                         </ul>
                         <a href="https://github.com/SillyTavern/SillyTavern" target="_blank" rel="noopener" class="btn btn-external">Visit SillyTavern</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>GPT4All</h4>
+                        <div class="tag">Nomic</div>
+                        <p>Desktop app and SDK for running local models</p>
+                        <div class="latency">⚡⚡⚡</div>
+                        <div class="autonomy">Low</div>
+                        <ul>
+                            <li>One-click model downloads</li>
+                            <li>Local inference with simple UI</li>
+                            <li>SDKs for app integration</li>
+                        </ul>
+                        <a href="https://gpt4all.io/" target="_blank" rel="noopener" class="btn btn-external">Visit GPT4All</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>KoboldAI</h4>
+                        <div class="tag">Community</div>
+                        <p>Web UI for story and code assistance with local/remote backends</p>
+                        <div class="latency">⚡⚡⚡</div>
+                        <div class="autonomy">Low</div>
+                        <ul>
+                            <li>Multiple backend support</li>
+                            <li>Extensive UI customization</li>
+                            <li>Pairs well with KoboldCpp</li>
+                        </ul>
+                        <a href="https://github.com/KoboldAI/KoboldAI-Client" target="_blank" rel="noopener" class="btn btn-external">Visit KoboldAI</a>
                     </div>
                 </div>
             </div>

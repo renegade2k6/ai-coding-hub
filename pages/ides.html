@@ -17,21 +17,28 @@
     <meta name="twitter:title" content="AI-Powered IDEs Comparison 2025 - AI Coding Hub">
     <meta name="twitter:description" content="Compare AI-powered IDEs in 2025 including Cursor, Qoder, Windsurf, Kiro, Zed, JetBrains AI Assistant, GitHub Copilot, Gemini Code Assist, Amazon Q Developer, Replit Agent, and Warp 2.0.">
     <meta name="twitter:image" content="https://renegade2k6.github.io/ai-coding-hub/assets/ides-preview.jpg">
-    <meta name="twitter:creator" content="@Renegade2k6">
+    <meta name="twitter:creator" content="@Renegade2k6News">
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="AI Coding Hub">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="AI Coding Hub">
+    <meta name="msapplication-TileColor" content="#03050b">
+    <meta name="theme-color" content="#00d4ff">
     <title>AI-Powered IDEs Comparison 2025 - AI Coding Hub</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/pages/ides.html">
+    <script src="../js/components/header.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div style="display: flex; gap: 14px; align-items: center;">
-                <div class="logo" style="width: 44px; height: 44px; border-radius: 12px; position: relative; isolation: isolate; background: linear-gradient(180deg,#0f1d3e,#0a1328); box-shadow: inset 0 0 0 1px rgba(125,249,255,.25);" aria-hidden="true">
-                    <div style="position: absolute; inset: -2px; border-radius: 14px; background: conic-gradient(from 210deg, var(--accent), var(--accent-2), #0cf, var(--accent)); filter: blur(10px); opacity: .7; z-index: -1;"></div>
+            <div class="header-bar">
+                <div class="logo">
+                    <div class="logo-icon" aria-hidden="true"></div>
+                    <h1>AI Coding Hub</h1>
                 </div>
-                <h1>AI Coding Hub</h1>
-            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -52,7 +59,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
                 <h2>AI-Powered IDEs</h2>
@@ -217,6 +224,19 @@
                         <a href="https://replit.com/site/agent" target="_blank" rel="noopener" class="btn btn-external">Visit Replit Agent</a>
                     </div>
                     <div class="tool-card">
+                        <h4>Replit Ghostwriter</h4>
+                        <div class="tag">Replit</div>
+                        <p>AI coding assistant integrated into Replit's IDE</p>
+                        <div class="latency">⚡⚡⚡⚡</div>
+                        <div class="autonomy">Medium</div>
+                        <ul>
+                            <li>Real-time code suggestions</li>
+                            <li>Context-aware completions</li>
+                            <li>Integrated with Replit's ecosystem</li>
+                        </ul>
+                        <a href="https://replit.com/site/ghostwriter" target="_blank" rel="noopener" class="btn btn-external">Visit Replit Ghostwriter</a>
+                    </div>
+                    <div class="tool-card">
                         <h4>Warp 2.0</h4>
                         <div class="tag">Warp</div>
                         <p>Agentic development environment with multiple agents</p>
@@ -240,5 +260,20 @@
     <script src="../js/main.js" defer></script>
     <script src="../js/search.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('../sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
 </body>
 </html>

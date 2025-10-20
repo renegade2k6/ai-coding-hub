@@ -1,24 +1,8 @@
 // Component Loader - Initialize modular components
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Header Component
-    if (window.HeaderComponent) {
-        // Only replace existing header, don't create if it doesn't exist
-        const existingHeader = document.querySelector('header');
-        if (existingHeader) {
-            const headerComponent = new HeaderComponent();
-            headerComponent.replace();
-        }
-    }
-
-    // Initialize Footer Component  
-    if (window.FooterComponent) {
-        // Only replace existing footer, don't create if it doesn't exist
-        const existingFooter = document.querySelector('footer');
-        if (existingFooter) {
-            const footerComponent = new FooterComponent();
-            footerComponent.replace();
-        }
-    }
+    // The header and footer components are loaded via their respective JS files
+    // which handle the DOM manipulation. We don't initialize them here as classes
+    // since they use procedural patterns instead of class-based components.
 
     // Enhanced animations for cards after components are loaded
     setTimeout(() => {

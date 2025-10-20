@@ -22,16 +22,16 @@
     <title>Agent Frameworks Comparison 2025 - AI Coding Hub</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/pages/agent-frameworks.html">
+    <script src="../js/components/header.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div style="display: flex; gap: 14px; align-items: center;">
-                <div class="logo" style="width: 44px; height: 44px; border-radius: 12px; position: relative; isolation: isolate; background: linear-gradient(180deg,#0f1d3e,#0a1328); box-shadow: inset 0 0 0 1px rgba(125,249,255,.25);" aria-hidden="true">
-                    <div style="position: absolute; inset: -2px; border-radius: 14px; background: conic-gradient(from 210deg, var(--accent), var(--accent-2), #0cf, var(--accent)); filter: blur(10px); opacity: .7; z-index: -1;"></div>
+            <div class="header-bar">
+                <div class="logo">
+                    <div class="logo-icon" aria-hidden="true"></div>
+                    <h1>AI Coding Hub</h1>
                 </div>
-                <h1>AI Coding Hub</h1>
-            </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -52,7 +52,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
                 <h2>Agent & Orchestration Frameworks</h2>
@@ -121,6 +121,58 @@
                             <li>Tool integration</li>
                         </ul>
                         <a href="https://www.llamaindex.ai/" target="_blank" rel="noopener" class="btn btn-external">Visit LlamaIndex</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>Ray</h4>
+                        <div class="tag">Anyscale</div>
+                        <p>Distributed computing framework for AI and ML workloads</p>
+                        <div class="latency">⚡⚡⚡⚡</div>
+                        <div class="autonomy">Low</div>
+                        <ul>
+                            <li>Scalable distributed computing</li>
+                            <li>AI/ML workload optimization</li>
+                            <li>Cluster and resource management</li>
+                        </ul>
+                        <a href="https://github.com/ray-project/ray" target="_blank" rel="noopener" class="btn btn-external">Visit Ray</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>CrewAI</h4>
+                        <div class="tag">CrewAI</div>
+                        <p>Multi-agent orchestration with roles, tools, and memory</p>
+                        <div class="latency">⚡⚡⚡</div>
+                        <div class="autonomy">High</div>
+                        <ul>
+                            <li>Role-based agents and tooling</li>
+                            <li>Memory and planning primitives</li>
+                            <li>Python-first, open-source</li>
+                        </ul>
+                        <a href="https://www.crewai.com/" target="_blank" rel="noopener" class="btn btn-external">Visit CrewAI</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>LangGraph</h4>
+                        <div class="tag">LangChain</div>
+                        <p>Graph-based stateful agent workflows and runtime</p>
+                        <div class="latency">⚡⚡⚡</div>
+                        <div class="autonomy">Medium</div>
+                        <ul>
+                            <li>Deterministic graph execution</li>
+                            <li>Built on LangChain ecosystem</li>
+                            <li>Production-oriented runtime</li>
+                        </ul>
+                        <a href="https://langchain-ai.github.io/langgraph/" target="_blank" rel="noopener" class="btn btn-external">Visit LangGraph</a>
+                    </div>
+                    <div class="tool-card">
+                        <h4>OpenDevin</h4>
+                        <div class="tag">Community</div>
+                        <p>Open-source autonomous software engineering agent</p>
+                        <div class="latency">⚡⚡⚡</div>
+                        <div class="autonomy">High</div>
+                        <ul>
+                            <li>End-to-end coding workflows</li>
+                            <li>Browser + terminal automation</li>
+                            <li>Active OSS community</li>
+                        </ul>
+                        <a href="https://github.com/OpenDevin/OpenDevin" target="_blank" rel="noopener" class="btn btn-external">Visit OpenDevin</a>
                     </div>
                 </div>
 

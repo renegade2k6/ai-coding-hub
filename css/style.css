@@ -21,6 +21,23 @@
   --shadow-hover: 0 25px 80px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(125, 249, 255, .12);
   --glow: 0 0 20px rgba(0, 212, 255, .3);
   --glow-strong: 0 0 30px rgba(0, 212, 255, .5);
+  --neon-pulse: 0 0 15px #00d4ff, 0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+/* Neon pulsing animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow: var(--neon-pulse);
+    text-shadow: 0 0 8px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 25px #00d4ff, 0 0 40px rgba(0, 212, 255, 0.6);
+    text-shadow: 0 0 12px currentColor;
+  }
+}
+
+.neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
 }
 
 * {
@@ -41,6 +58,17 @@ html, body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease;
+}
+
+/* Prevent white flash during loading */
+body.header-loading,
+body.footer-loading {
+  background: 
+    radial-gradient(1400px 800px at 15% -15%, rgba(11, 31, 74, .8) 0%, transparent 65%),
+    radial-gradient(1200px 700px at 115% 25%, rgba(58, 19, 97, .7) 0%, transparent 60%),
+    radial-gradient(800px 500px at 50% 100%, rgba(16, 32, 80, .4) 0%, transparent 50%),
+    linear-gradient(165deg, var(--bg0) 0%, var(--bg1) 40%, var(--bg2) 100%) !important;
 }
 
 body {
@@ -134,11 +162,15 @@ nav ul {
   overflow-x: auto; /* Add horizontal scrolling if needed */
   padding-bottom: 5px; /* Add space for scrollbar */
   min-width: min-content; /* Ensure navigation takes minimum space needed for content */
+  min-height: 48px; /* Prevent jumping by maintaining consistent height */
 }
 
 nav li {
   flex-shrink: 0;
   white-space: nowrap; /* Prevent text wrapping */
+  min-height: 36px; /* Ensure consistent item height */
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -151,17 +183,96 @@ nav a {
   font-weight: 500;
   white-space: nowrap; /* Prevent text wrapping */
   min-width: max-content; /* Ensure link takes minimum space needed for text */
+  height: 36px;
+  display: flex;
+  align-items: center;
+  min-width: 90px; /* Consistent minimum width for all nav items */
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: max-content;
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  transition: left 0.5s ease;
 }
 
 nav a:hover {
   color: var(--ink);
   background: rgba(125, 249, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+}
+
+nav a:hover::before {
+  left: 100%;
 }
 
 nav a.active {
   color: var(--accent);
   background: rgba(125, 249, 255, 0.15);
   box-shadow: 0 0 0 1px rgba(125, 249, 255, 0.3);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+/* Enhanced button styles */
+.btn {
+  display: inline-block;
+  background: var(--panel-2);
+  color: var(--ink);
+  padding: 0.875rem 1.75rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--bg1);
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: var(--neon-pulse);
+  animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 /* Ensure proper spacing for navigation items */
@@ -281,10 +392,12 @@ nav a.active {
 }
 
 .category-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.03);
   border-color: rgba(0, 212, 255, .6);
   background: linear-gradient(145deg, rgba(14, 24, 52, .9), rgba(9, 16, 34, .85));
-  box-shadow: var(--shadow-hover), var(--glow);
+  box-shadow: var(--shadow-hover), var(--glow), 0 0 40px rgba(0, 212, 255, 0.4);
+  perspective: 1000px;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
 }
 
 .category-card h3 {
@@ -455,27 +568,110 @@ nav a.active {
 }
 
 .tool-card:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg) scale(1.02);
   border-color: rgba(0, 212, 255, .6);
   background: linear-gradient(145deg, rgba(14, 24, 52, .9), rgba(9, 16, 34, .85));
-  box-shadow: var(--shadow-hover), var(--glow);
+  box-shadow: var(--shadow-hover), var(--glow), 0 0 40px rgba(0, 212, 255, 0.4);
+  perspective: 1000px;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
 }
 
+/* Enhanced tool card header with icon support */
 .tool-card h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.tool-card h4 .tool-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--bg0);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.tool-card:hover h4::after {
+  transform: translateX(5px);
+  opacity: 1;
+}
+
+/* Enhanced visual hierarchy for tool cards */
+.tool-card .tag {
+  background: linear-gradient(135deg, var(--chip), #1a2540);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tool-card p {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.tool-card ul {
+  margin: 1.25rem 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.tool-card ul li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.tool-card:hover ul li {
   color: var(--ink);
 }
 
+/* Enhanced Tag System */
 .tool-card .tag {
   display: inline-block;
-  background: var(--chip);
-  color: #b6c7dc;
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
+  background: linear-gradient(135deg, var(--chip), #1a2540);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
   font-size: 0.8rem;
   margin-bottom: 1rem;
-  border: 1px solid #2a3a50;
+  border: 1px solid var(--border);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card .tag.featured-tag {
+  background: linear-gradient(135deg, #1a2540, #253555);
+  color: var(--accent-2);
+  border-color: rgba(176, 132, 255, 0.4);
+  box-shadow: 0 0 15px rgba(176, 132, 255, 0.3);
+}
+
+.tool-card:hover .tag {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
 .tool-card p {
@@ -513,10 +709,15 @@ nav a.active {
   text-shadow: 0 0 10px rgba(0, 212, 255, .4);
   letter-spacing: 2px;
   position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
 .tool-card .latency::before {
-  content: "Speed: ";
+  content: "⚡ Speed: ";
   opacity: 0.8;
   font-weight: 500;
   letter-spacing: normal;
@@ -529,7 +730,7 @@ nav a.active {
   background: linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 212, 255, 0.1));
   color: var(--ok);
   padding: 0.3rem 0.75rem;
-  border-radius: 12px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
   margin: 0.25rem 0 1rem;
@@ -540,7 +741,7 @@ nav a.active {
 }
 
 .tool-card .autonomy::before {
-  content: "Autonomy: ";
+  content: "🤖 Autonomy: ";
   opacity: 0.8;
   font-weight: 500;
   text-transform: none;
@@ -959,6 +1160,47 @@ footer a:hover {
 
 .skip-link:focus {
   top: 6px;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--panel), var(--bg2), var(--panel));
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 18px;
+  min-height: 200px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-card {
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 24px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 16px;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+.skeleton-text:nth-child(2) {
+  width: 85%;
 }
 
 /* High contrast mode support */
