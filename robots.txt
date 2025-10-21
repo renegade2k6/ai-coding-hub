@@ -28,3 +28,11 @@ Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://renegade2k6.github.io/ai-coding-hub/sitemap.xml
+
+# Additional pages to disallow from crawling (if any)
+Disallow: /*.tmp$
+Disallow: /*.bak$
+
+# Allow important files
+Allow: /sitemap.xml$
+Allow: /robots.txt$

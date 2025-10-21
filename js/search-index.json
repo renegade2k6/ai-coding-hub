@@ -1,0 +1,1495 @@
+{
+  "generatedAt": "2025-10-21T06:47:42.735Z",
+  "items": [
+    {
+      "name": "Windsurf (Codeium)",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/codeium/codeium"
+        },
+        {
+          "label": "Website",
+          "url": "https://codeium.com/windsurf"
+        }
+      ],
+      "category": "Featured",
+      "page": null
+    },
+    {
+      "name": "Qoder (preview)",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://qoder.com/"
+        }
+      ],
+      "category": "Featured",
+      "page": null
+    },
+    {
+      "name": "Cursor",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://cursor.sh"
+        },
+        {
+          "label": "Info",
+          "url": "https://www.cursor.com/"
+        }
+      ],
+      "category": "Featured",
+      "page": null
+    },
+    {
+      "name": "Kiro (AWS)",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://kiro.dev/"
+        }
+      ],
+      "category": "Featured",
+      "page": null
+    },
+    {
+      "name": "Claude Code (CLI)",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/anthropics/claude-code"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.anthropic.com/s/claude-code"
+        }
+      ],
+      "category": "Featured",
+      "page": null
+    },
+    {
+      "name": "AIChat",
+      "tags": [
+        "CLI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/sigoden/aichat"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Aider",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Aider-AI/aider"
+        },
+        {
+          "label": "Website",
+          "url": "https://aider.chat/"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Cline‑CLI",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/yaegaki/cline-cli"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Cody (CLI)",
+      "tags": [
+        "CLI"
+      ],
+      "links": [
+        {
+          "label": "README",
+          "url": "https://sourcegraph.com/github.com/sourcegraph/cody/-/blob/cli/README.md"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Copilot in the CLI",
+      "tags": [
+        "CLI"
+      ],
+      "links": [
+        {
+          "label": "Docs",
+          "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-for-common-tasks/use-copilot-in-the-cli"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Gemini CLI",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/google-gemini/gemini-cli"
+        },
+        {
+          "label": "Docs",
+          "url": "https://cloud.google.com/gemini/docs/codeassist/gemini-cli"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "LLM (Simon Willison)",
+      "tags": [
+        "CLI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/simonw/llm"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Mods (Charmbracelet)",
+      "tags": [
+        "CLI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/charmbracelet/mods"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Open Interpreter",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/openinterpreter/open-interpreter"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "OpenAI Codex (Legacy)",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/openai/codex"
+        },
+        {
+          "label": "Docs",
+          "url": "https://developers.openai.com/codex/cli/"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "OpenHands",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS",
+        "Agents"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/All-Hands-AI/OpenHands"
+        },
+        {
+          "label": "Docs",
+          "url": "https://docs.all-hands.dev/"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Qwen Code (CLI)",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/QwenLM/qwen-code"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Qwen3‑Coder (models)",
+      "tags": [
+        "Models",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/QwenLM/Qwen3-Coder"
+        },
+        {
+          "label": "Blog",
+          "url": "https://qwenlm.github.io/blog/qwen3-coder/"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "ShellGPT",
+      "tags": [
+        "CLI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TheR1D/shell_gpt"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "SWE‑agent",
+      "tags": [
+        "CLI",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SWE-agent/SWE-agent"
+        },
+        {
+          "label": "Website",
+          "url": "https://swe-agent.com/"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Warp AI",
+      "tags": [
+        "Terminal"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.warp.dev/ai"
+        }
+      ],
+      "category": "CLI & Terminal",
+      "page": "pages/cli-tools.html"
+    },
+    {
+      "name": "Amazon Q Developer",
+      "tags": [
+        "IDE Assistant"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://aws.amazon.com/q/developer/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Cline (VS Code Agent)",
+      "tags": [
+        "VS Code",
+        "Agent",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/cline/cline"
+        },
+        {
+          "label": "Website",
+          "url": "https://cline.bot/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Codeium",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://codeium.com/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Continue",
+      "tags": [
+        "VS Code",
+        "JetBrains",
+        "CLI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/continuedev/continue"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.continue.dev/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Copilot for Obsidian",
+      "tags": [
+        "Obsidian",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/logancyang/obsidian-copilot"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Gemini Code Assist",
+      "tags": [
+        "IDE Assistant"
+      ],
+      "links": [
+        {
+          "label": "Docs",
+          "url": "https://ai.google.dev/gemini-api/docs/code-assist"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "GitHub Copilot",
+      "tags": [
+        "IDE Assistant"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/features/copilot"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "JetBrains AI Assistant",
+      "tags": [
+        "IDE Assistant"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.jetbrains.com/ai/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "LLM Workspace (Obsidian)",
+      "tags": [
+        "Obsidian",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ofalvai/obsidian-llm-workspace"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Qoder",
+      "tags": [
+        "IDE",
+        "Preview"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://qoder.com/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "QuickAdd (Obsidian)",
+      "tags": [
+        "Obsidian",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/chhoumann/quickadd"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Snyk Code",
+      "tags": [
+        "Security",
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://snyk.io/product/snyk-code/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Sourcegraph Cody",
+      "tags": [
+        "IDE",
+        "CLI"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://sourcegraph.com/cody"
+        },
+        {
+          "label": "README",
+          "url": "https://sourcegraph.com/github.com/sourcegraph/cody/-/blob/cli/README.md"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Supermaven",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.supermaven.com/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Tabnine",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.tabnine.com/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Text Generator (Obsidian)",
+      "tags": [
+        "Obsidian",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/nhaouari/obsidian-textgenerator-plugin"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "Zed",
+      "tags": [
+        "IDE"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://zed.dev/"
+        }
+      ],
+      "category": "IDEs & Extensions",
+      "page": "pages/ides.html"
+    },
+    {
+      "name": "AutoGen (Microsoft)",
+      "tags": [
+        "Agents"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://microsoft.github.io/autogen/"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "CrewAI",
+      "tags": [
+        "Agents",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/crewAIInc/crewAI"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "DigitalOcean Gradient Platform",
+      "tags": [
+        "Platform"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.digitalocean.com/products/gradient/platform"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "Gumloop",
+      "tags": [
+        "Platform"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.gumloop.com/"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "HARPA AI",
+      "tags": [
+        "Web"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://harpa.ai/"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "LangChain",
+      "tags": [
+        "RAG",
+        "Agents",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/langchain-ai/langchain"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "LangGraph",
+      "tags": [
+        "Agents",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/langchain-ai/langgraph"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "LlamaIndex",
+      "tags": [
+        "RAG",
+        "Agents",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/run-llama/llama_index"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "Powerdrill Bloom",
+      "tags": [
+        "Low-code"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://bloom.powerdrill.ai/"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "Semantic Kernel",
+      "tags": [
+        "Agents",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/microsoft/semantic-kernel"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "Zapier Agents",
+      "tags": [
+        "No-code"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://zapier.com/l/agents-pricing"
+        }
+      ],
+      "category": "Agent Frameworks",
+      "page": "pages/agent-frameworks.html"
+    },
+    {
+      "name": "GPT4All",
+      "tags": [
+        "GUI"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://gpt4all.io/"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Jan",
+      "tags": [
+        "GUI"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://jan.ai/"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "KoboldAI",
+      "tags": [
+        "GUI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/KoboldAI/KoboldAI-Client"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "KoboldCpp",
+      "tags": [
+        "Runtime",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/LostRuins/koboldcpp"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "llama.cpp",
+      "tags": [
+        "Runtime",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/ggerganov/llama.cpp"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "LM Studio",
+      "tags": [
+        "GUI"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://lmstudio.ai/"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Ollama",
+      "tags": [
+        "Runtime"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://ollama.com/"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "ONNX Runtime",
+      "tags": [
+        "Runtime",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/microsoft/onnxruntime"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Open WebUI",
+      "tags": [
+        "GUI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/open-webui/open-webui"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "SillyTavern",
+      "tags": [
+        "GUI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/SillyTavern/SillyTavern"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Text Generation Inference (TGI)",
+      "tags": [
+        "Runtime",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/huggingface/text-generation-inference"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Text Generation WebUI",
+      "tags": [
+        "GUI",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/oobabooga/text-generation-webui"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "vLLM",
+      "tags": [
+        "Runtime",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/vllm-project/vllm"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "WebLLM (MLC)",
+      "tags": [
+        "Runtime"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://llm.mlc.ai/"
+        }
+      ],
+      "category": "Local & Self-Hosted",
+      "page": "pages/local-runtimes.html"
+    },
+    {
+      "name": "Amazon CodeGuru",
+      "tags": [
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://aws.amazon.com/codeguru/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Anthropic",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.anthropic.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "AnythingLLM",
+      "tags": [
+        "RAG",
+        "App"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://anythingllm.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Applitools",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://applitools.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Bolt.new",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://bolt.new"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Builder.io",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.builder.io"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Claude Artifacts",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://claude.ai"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Codacy",
+      "tags": [
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.codacy.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "CodeRabbit",
+      "tags": [
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://coderabbit.ai"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Cohere",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://cohere.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Danswer",
+      "tags": [
+        "RAG",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/danswer-ai/danswer"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "DeepSource",
+      "tags": [
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://deepsource.io/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Diffblue Cover",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.diffblue.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Durable",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://durable.co"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Fireworks AI",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://fireworks.ai/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Framer AI",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.framer.com"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Functionize",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.functionize.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Google AI Studio",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://ai.google.dev/aistudio"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "GroqCloud",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://console.groq.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Haystack",
+      "tags": [
+        "RAG"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://haystack.deepset.ai/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Lovable",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://lovable.dev"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Mabl",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.mabl.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Meta AI Studio",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://ai.meta.com/ai-studio/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Mistral",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://mistral.ai/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "OpenAI",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://openai.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "OpenRouter",
+      "tags": [
+        "Router"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://openrouter.ai/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Perplexity API",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.perplexity.ai/hub"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "PrivateGPT",
+      "tags": [
+        "RAG",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/imartinez/privateGPT"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "PR‑Agent",
+      "tags": [
+        "QA",
+        "OSS"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Codium-ai/pr-agent"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Replit Agent",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://replit.com/agent"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Sauce Labs",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://saucelabs.com/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "SonarQube",
+      "tags": [
+        "QA"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.sonarqube.org/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Testim",
+      "tags": [
+        "Testing"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.testim.io/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Together AI",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.together.ai/"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "v0.dev",
+      "tags": [
+        "Prototype"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://v0.dev"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    },
+    {
+      "name": "Vertex AI (GCP)",
+      "tags": [
+        "Provider"
+      ],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://cloud.google.com/discover/ai-applications"
+        }
+      ],
+      "category": "Cloud, RAG & DevOps",
+      "page": "pages/rag-tools.html"
+    }
+  ]
+}

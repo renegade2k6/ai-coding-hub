@@ -1,4 +1,39 @@
 (function() {
+  function injectNavIcons(){
+    try{
+      const nav = document.querySelector('nav');
+      if(!nav) return;
+      const map = new Map([
+        ['index.html','home'],
+        ['pages/cli-tools.html','terminal'],
+        ['pages/ides.html','code'],
+        ['pages/agent-frameworks.html','bot'],
+        ['pages/local-runtimes.html','device'],
+        ['pages/rag-tools.html','cloud'],
+        ['pages/contact.html','mail']
+      ]);
+      const toSymbol = (href) => {
+        for (const [key, sym] of map.entries()){
+          if (href.endsWith(key)) return sym;
+        }
+        return null;
+      };
+      const links = nav.querySelectorAll('a');
+      links.forEach(a => {
+        const sym = toSymbol(a.getAttribute('href') || '');
+        if (!sym) return;
+        if (a.querySelector('svg.icon')) return; // already has
+        const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+        svg.setAttribute('class','icon');
+        const use = document.createElementNS('http://www.w3.org/2000/svg','use');
+        // compute sprite path
+        const base = location.pathname.includes('/pages/') ? '../' : '';
+        use.setAttribute('href', base + 'assets/icons/sprite.svg#' + sym);
+        svg.appendChild(use);
+        a.prepend(svg);
+      });
+    }catch(e){ /* no-op */ }
+  }
   function pathPrefix() {
     const p = location.pathname;
     return p.includes('/pages/') ? '../' : '';
@@ -28,10 +63,12 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       updateNavigation();
+      injectNavIcons();
     });
   } else {
     // DOM already loaded, update immediately
     updateNavigation();
+    injectNavIcons();
   }
   
   // Add CSS class for loading state to the document head
