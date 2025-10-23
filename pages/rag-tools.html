@@ -47,9 +47,19 @@
     </header>
 
     <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li aria-current="page">Cloud, RAG & DevOps</li>
+                </ol>
+            </div>
+        </nav>
+
         <section class="hero">
             <div class="container">
-                <h2>Cloud, RAG &amp; DevOps</h2>
+                <h1>Cloud, RAG &amp; DevOps</h1>
                 <p>RAG frameworks, model routers, testing/QA, code quality, and AI web builders for cloud workflows</p>
             </div>
         </section>
@@ -72,7 +82,7 @@
 
         <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="complete-rag-solutions">
                     <h3>Complete RAG Solutions <span class="header-chip">Hosted</span></h3>
                     <p>Turnkey doc chat: ingestion, retrieval, reranking, and chat UI out of the box</p>
                 </div>
@@ -119,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="rag-frameworks">
                     <h3>RAG Frameworks <span class="header-chip">Frameworks</span></h3>
                     <p>Core libraries to assemble custom pipelines: loaders, chunking, indices, retrievers</p>
                 </div>
@@ -166,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="document-chat-applications">
                     <h3>Document Chat Applications <span class="header-chip">Hosted</span></h3>
                     <p>Hosted apps for Q&A over your knowledge sources with minimal setup</p>
                 </div>
@@ -208,7 +218,7 @@
         <!-- Merged from model-providers.html -->
 <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="model-routers-providers">
                     <h3>Model Routers &amp; Providers <span class="header-chip">Routers</span></h3>
                     <p>Unified access to many models and vendors; switch, compare, and optimize</p>
                 </div>
@@ -283,7 +293,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="major-ai-model-providers">
                     <h3>Major AI Model Providers <span class="header-chip">Providers</span></h3>
                     <p>Frontier and OSS model vendors with hosted inference and tooling</p>
                 </div>
@@ -391,7 +401,7 @@
         <!-- Merged from testing.html -->
 <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="testing-qa">
                     <h3>Testing &amp; QA <span class="header-chip">Testing</span></h3>
                     <p>Generate, maintain, and analyze tests with AI in CI and IDEs</p>
                 </div>
@@ -527,7 +537,7 @@
         <!-- Merged from code-review.html -->
 <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="code-review-quality">
                     <h3>Code Review &amp; Quality <span class="header-chip">Quality</span></h3>
                     <p>Static analysis, SAST, and PR review to improve code health and security</p>
                 </div>
@@ -646,7 +656,7 @@
         <!-- Merged from web-builders.html -->
 <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="prototyping-web-builders">
                     <h3>Prototyping &amp; Web Builders <span class="header-chip">Builders</span></h3>
                     <p>Prompt-to-app tools for UI, sites, and full-stack prototypes</p>
                 </div>
@@ -775,34 +785,34 @@
             </div>
         </section>
 
-</main>
-
-    
-
-    <!-- Related Categories Section for Internal Linking -->
-    <section class="related-categories" style="margin: 2rem 0; padding: 2rem 0; border-top: 1px solid var(--border);">
-        <div class="container">
-            <h3>Explore Related AI Development Tools</h3>
-            <div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div class="category-card">
-                    <h4><a href="ides.html">IDEs & Extensions</a></h4>
-                    <p>AI-powered IDEs and editor extensions</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
-                    <p>Command-line AI coding assistants</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="local-runtimes.html">Local & Self-Hosted</a></h4>
-                    <p>Run models locally with privacy and control</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
-                    <p>Frameworks for building and orchestrating AI agents</p>
+        <!-- Related Categories Section for Internal Linking -->
+        <section class="content">
+            <div class="container">
+                <div class="category-intro">
+                    <h3>Explore Related AI Development Tools</h3>
+                    <div class="tool-grid">
+                        <div class="tool-card">
+                            <h4><a href="ides.html">IDEs & Extensions</a></h4>
+                            <p>AI-powered IDEs and editor extensions</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
+                            <p>Command-line AI coding assistants</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="local-runtimes.html">Local & Self-Hosted</a></h4>
+                            <p>Run models locally with privacy and control</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
+                            <p>Frameworks for building and orchestrating AI agents</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+</main>
 
     <script src="../js/performance.js" defer></script>
     <script src="../js/components/header.js" defer></script>
@@ -810,6 +820,10 @@
     <script src="../js/card-enhancements.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/search.js" defer></script>
+    <script src="../js/autonomy-styling.js" defer></script>
+    <script src="../js/consistency-fixes.js" defer></script>
+    <script src="../js/quicknav-enhancement.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
 </body>
 </html>

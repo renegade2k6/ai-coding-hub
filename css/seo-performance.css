@@ -21,13 +21,13 @@
 
 /* Performance - Reduce layout shift */
 .tool-card {
-    min-height: 300px;
+    min-height: 200px;
     contain: layout style paint;
 }
 
 /* Loading states to prevent CLS */
 .tool-grid {
-    min-height: 400px;
+    min-height: 250px;
 }
 
 /* Optimize images for Core Web Vitals */
@@ -105,7 +105,7 @@ button:focus {
 /* Mobile performance optimizations */
 @media (max-width: 768px) {
     .tool-card {
-        min-height: 250px;
+        min-height: 180px;
     }
     
     /* Reduce complexity on mobile */
@@ -125,29 +125,41 @@ button:focus {
     background: rgba(255, 255, 255, 0.05);
     padding: 8px 0;
     font-size: 14px;
+    width: 100%;
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
 }
 
 .breadcrumb ol {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto;
 }
 
 .breadcrumb li {
-    display: flex;
+    display: inline-flex !important;
     align-items: center;
+    white-space: nowrap;
 }
 
 .breadcrumb li:not(:last-child)::after {
     content: '/';
     margin: 0 8px;
     color: #666;
+    font-weight: normal;
 }
 
 .breadcrumb a {
     color: var(--accent);
     text-decoration: none;
+    display: inline;
 }
 
 .breadcrumb a:hover {
@@ -156,6 +168,7 @@ button:focus {
 
 .breadcrumb li[aria-current="page"] {
     color: #ccc;
+    display: inline;
 }
 
 /* Mobile breadcrumb */

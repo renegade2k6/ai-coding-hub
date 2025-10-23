@@ -21,7 +21,6 @@
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
     <title>AI Coding CLI Tools Comparison 2025 | Autonomous Coding Agents & Terminal AI Assistants | AI Coding Hub</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/seo-performance.css">
     <link rel="manifest" href="../manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="AI Coding Hub">
@@ -83,9 +82,46 @@
       }
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the best AI CLI tools for coding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best AI CLI tools for coding include Claude Code, Aider, OpenHands, GitHub Copilot CLI, Gemini CLI, and Open Interpreter. These tools offer autonomous coding capabilities, git integration, and support for multiple programming languages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do AI terminal assistants work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI terminal assistants work by integrating with your command line interface to provide code suggestions, automate tasks, and assist with development workflows. They use large language models to understand context and generate relevant code or commands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are AI CLI tools free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many AI CLI tools are open source and free to use, such as Aider, Open Interpreter, and Continue. However, they may require API keys for AI services like OpenAI, Anthropic, or Google AI, which have their own pricing."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header>
+    <!-- Skip Links for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#navigation" class="skip-link">Skip to navigation</a>
+    
+    <header id="navigation">
         <div class="container">
             <div class="header-bar">
                 <div class="logo">
@@ -107,6 +143,16 @@
     </header>
 
     <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li aria-current="page">CLI & Terminal Tools</li>
+                </ol>
+            </div>
+        </nav>
+
         <section class="hero">
             <div class="container">
                 <h1>AI CLI Tools & Terminal Assistants 2025</h1>
@@ -127,7 +173,7 @@
 
         <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="ai-coding-agents">
                     <h3>AI Coding Agents</h3>
                     <p>Tools specifically designed for autonomous coding tasks with repository awareness</p>
                 </div>
@@ -289,7 +335,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="terminal-ai-assistants">
                     <h3>Terminal AI Assistants</h3>
                     <p>General purpose AI tools that work in the terminal but aren't specifically coding-focused</p>
                 </div>
@@ -375,7 +421,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="specialized-tools">
                     <h3>Specialized Tools</h3>
                     <p>Tools with specific purposes that don't fit in the above categories</p>
                 </div>
@@ -496,34 +542,34 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    
-
-    <!-- Related Categories Section for Internal Linking -->
-    <section class="related-categories" style="margin: 2rem 0; padding: 2rem 0; border-top: 1px solid var(--border);">
-        <div class="container">
-            <h3>Explore Related AI Development Tools</h3>
-            <div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div class="category-card">
-                    <h4><a href="../pages/ides.html">IDEs & Extensions</a></h4>
-                    <p>AI-powered IDEs and editor extensions</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="../pages/local-runtimes.html">Local & Self-Hosted</a></h4>
-                    <p>Run models locally with privacy and control</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="../pages/agent-frameworks.html">Agent Frameworks</a></h4>
-                    <p>Frameworks for building and orchestrating AI agents</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="../pages/rag-tools.html">Cloud, RAG & DevOps</a></h4>
-                    <p>RAG frameworks, model routers, testing, and quality tools</p>
+        <!-- Related Categories Section for Internal Linking -->
+        <section class="content">
+            <div class="container">
+                <div class="category-intro">
+                    <h3>Explore Related AI Development Tools</h3>
+                    <div class="tool-grid">
+                        <div class="tool-card">
+                            <h4><a href="ides.html">IDEs & Extensions</a></h4>
+                            <p>AI-powered IDEs and editor extensions</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="local-runtimes.html">Local & Self-Hosted</a></h4>
+                            <p>Run models locally with privacy and control</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
+                            <p>Frameworks for building and orchestrating AI agents</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="rag-tools.html">Cloud, RAG & DevOps</a></h4>
+                            <p>RAG frameworks, model routers, testing, and quality tools</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="../js/performance.js" defer></script>
     <script src="../js/components/header.js" defer></script>
@@ -531,6 +577,10 @@
     <script src="../js/card-enhancements.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/search.js" defer></script>
+    <script src="../js/autonomy-styling.js" defer></script>
+    <script src="../js/consistency-fixes.js" defer></script>
+    <script src="../js/quicknav-enhancement.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
 </body>
 </html>

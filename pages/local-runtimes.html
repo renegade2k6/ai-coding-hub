@@ -47,9 +47,19 @@
     </header>
 
     <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li aria-current="page">Local & Self-Hosted</li>
+                </ol>
+            </div>
+        </nav>
+
         <section class="hero">
             <div class="container">
-                <h2>Local &amp; Self-Hosted</h2>
+                <h1>Local &amp; Self-Hosted</h1>
                 <p>Local runtimes and GUIs to run models on your own hardware</p>
             </div>
         </section>
@@ -66,7 +76,7 @@
 
         <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="local-model-runtimes">
                     <h3>Local Model Runtimes</h3>
                     <p>Command-line tools for running AI models locally</p>
                 </div>
@@ -178,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="desktop-gui-applications">
                     <h3>Desktop GUI Applications</h3>
                     <p>Graphical applications for running AI models locally</p>
                 </div>
@@ -278,34 +288,34 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    
-
-    <!-- Related Categories Section for Internal Linking -->
-    <section class="related-categories" style="margin: 2rem 0; padding: 2rem 0; border-top: 1px solid var(--border);">
-        <div class="container">
-            <h3>Explore Related AI Development Tools</h3>
-            <div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div class="category-card">
-                    <h4><a href="ides.html">IDEs & Extensions</a></h4>
-                    <p>AI-powered IDEs and editor extensions</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
-                    <p>Command-line AI coding assistants</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
-                    <p>Frameworks for building and orchestrating AI agents</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="rag-tools.html">Cloud, RAG & DevOps</a></h4>
-                    <p>RAG frameworks, model routers, testing, and quality tools</p>
+        <!-- Related Categories Section for Internal Linking -->
+        <section class="content">
+            <div class="container">
+                <div class="category-intro">
+                    <h3>Explore Related AI Development Tools</h3>
+                    <div class="tool-grid">
+                        <div class="tool-card">
+                            <h4><a href="ides.html">IDEs & Extensions</a></h4>
+                            <p>AI-powered IDEs and editor extensions</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
+                            <p>Command-line AI coding assistants</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
+                            <p>Frameworks for building and orchestrating AI agents</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="rag-tools.html">Cloud, RAG & DevOps</a></h4>
+                            <p>RAG frameworks, model routers, testing, and quality tools</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="../js/performance.js" defer></script>
     <script src="../js/components/header.js" defer></script>
@@ -313,6 +323,10 @@
     <script src="../js/card-enhancements.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/search.js" defer></script>
+    <script src="../js/autonomy-styling.js" defer></script>
+    <script src="../js/consistency-fixes.js" defer></script>
+    <script src="../js/quicknav-enhancement.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
 </body>
 </html>

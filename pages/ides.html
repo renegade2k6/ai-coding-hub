@@ -80,6 +80,16 @@
     </header>
 
     <main id="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li aria-current="page">IDEs & Extensions</li>
+                </ol>
+            </div>
+        </nav>
+
         <section class="hero">
             <div class="container">
                 <h1>AI-Powered IDEs & Editor Extensions 2025</h1>
@@ -103,7 +113,7 @@
 
         <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="popular-ai-ides">
                     <h3>Popular AI IDEs</h3>
                     <p>Full-featured IDEs designed from the ground up with AI capabilities</p>
                 </div>
@@ -184,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="ides-with-ai-assistants">
                     <h3>IDEs with AI Assistants</h3>
                     <p>Traditional IDEs enhanced with AI capabilities</p>
                 </div>
@@ -244,7 +254,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="specialized-ai-ides">
                     <h3>Specialized AI IDEs</h3>
                     <p>IDEs with specific focuses or unique approaches</p>
                 </div>
@@ -299,7 +309,7 @@
         <!-- Merged from extensions.html -->
 <section class="content">
             <div class="container">
-                <div class="category-intro">
+                <div class="category-intro" id="agentic-coding-extensions">
                     <h3>Agentic Coding Extensions</h3>
                     <p>Extensions that act as autonomous coding agents within your editor</p>
                 </div>
@@ -372,7 +382,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="ai-assistant-extensions">
                     <h3>AI Assistant Extensions</h3>
                     <p>Extensions that provide AI assistance while coding</p>
                 </div>
@@ -497,7 +507,7 @@
                     </div>
                 </div>
 
-                <div class="category-intro">
+                <div class="category-intro" id="specialized-extensions">
                     <h3>Specialized Extensions</h3>
                     <p>Extensions with specific purposes that don't fit in the above categories</p>
                 </div>
@@ -572,34 +582,34 @@
             </div>
         </section>
 
-</main>
-
-    
-
-    <!-- Related Categories Section for Internal Linking -->
-    <section class="related-categories" style="margin: 2rem 0; padding: 2rem 0; border-top: 1px solid var(--border);">
-        <div class="container">
-            <h3>Explore Related AI Development Tools</h3>
-            <div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div class="category-card">
-                    <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
-                    <p>Command-line AI coding assistants</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="local-runtimes.html">Local & Self-Hosted</a></h4>
-                    <p>Run models locally with privacy and control</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
-                    <p>Frameworks for building and orchestrating AI agents</p>
-                </div>
-                <div class="category-card">
-                    <h4><a href="rag-tools.html">Cloud, RAG & DevOps</a></h4>
-                    <p>RAG frameworks, model routers, testing, and quality tools</p>
+        <!-- Related Categories Section for Internal Linking -->
+        <section class="content">
+            <div class="container">
+                <div class="category-intro">
+                    <h3>Explore Related AI Development Tools</h3>
+                    <div class="tool-grid">
+                        <div class="tool-card">
+                            <h4><a href="cli-tools.html">CLI & Terminal Tools</a></h4>
+                            <p>Command-line AI coding assistants</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="local-runtimes.html">Local & Self-Hosted</a></h4>
+                            <p>Run models locally with privacy and control</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="agent-frameworks.html">Agent Frameworks</a></h4>
+                            <p>Frameworks for building and orchestrating AI agents</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4><a href="rag-tools.html">Cloud, RAG & DevOps</a></h4>
+                            <p>RAG frameworks, model routers, testing, and quality tools</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+</main>
 
     <script src="../js/performance.js" defer></script>
     <script src="../js/components/header.js" defer></script>
@@ -607,6 +617,10 @@
     <script src="../js/card-enhancements.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/search.js" defer></script>
+    <script src="../js/autonomy-styling.js" defer></script>
+    <script src="../js/consistency-fixes.js" defer></script>
+    <script src="../js/quicknav-enhancement.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
     
     <!-- PWA Service Worker -->

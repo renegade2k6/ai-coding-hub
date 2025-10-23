@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Utility function to track external link clicks (optional analytics)
 window.trackExternalClick = function(toolName, url) {
     // This can be connected to analytics services
-    console.log(`External link clicked: ${toolName} -> ${url}`);
+    // External link clicked: ${toolName} -> ${url}
     
     // Example: Google Analytics event tracking
     if (typeof gtag !== 'undefined') {

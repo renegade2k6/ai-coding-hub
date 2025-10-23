@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = normalize(searchTermRaw.trim());
         let visibleCount = 0;
 
-        console.log('Search performed with term:', searchTerm); // Debug logging
+        // Search performed with term: ${searchTerm}
 
         // If below minimum length, reset view and exit
         if (searchTerm.length < MIN_LEN) {
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        console.log(`Local cards filtered. visibleCount: ${visibleCount}, total tool cards: ${document.querySelectorAll('.tool-card').length}`); // Debug logging
+        // Local cards filtered: ${visibleCount} visible of ${document.querySelectorAll('.tool-card').length} total
 
         const noResultsEl = document.getElementById('no-results');
         if(noResultsEl){ noResultsEl.style.display = visibleCount === 0 ? 'block' : 'none'; }
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearSuggestions();
         {
             const idx = await getExternalIndex();
-            console.log('External index loaded:', idx ? idx.items?.length : 'null'); // Debug logging
+            // External index loaded: ${idx ? idx.items?.length : 'null'} items
             if (idx && idx.items){
                 const matches = idx.items
                   .map(it => ({...it, score: Math.max(
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   )}))
                   .filter(it => it.score > 0)
                   .sort((a,b)=> b.score - a.score || a.name.localeCompare(b.name));
-                console.log(`Found ${matches.length} external matches for term "${searchTerm}"`); // Debug logging
+                // Found ${matches.length} external matches for term "${searchTerm}"
                 if (matches.length){ renderSuggestions(matches); }
             }
         }

@@ -22,6 +22,16 @@
   --glow: 0 0 20px rgba(0, 212, 255, .3);
   --glow-strong: 0 0 30px rgba(0, 212, 255, .5);
   --neon-pulse: 0 0 15px #00d4ff, 0 0 30px rgba(0, 212, 255, 0.4);
+  --border-radius-sm: 12px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 25px;
+  --border-radius-xl: 30px;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
 }
 
 /* Neon pulsing animation */
@@ -446,13 +456,13 @@ nav a.active {
 
 /* Hero Section */
 .hero {
-  padding: 5rem 0 3rem 0;
+  padding: 2rem 0 1.5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(5, 10, 25, 0.8) 0%, rgba(8, 16, 35, 0.9) 100%);
   border-bottom: 1px solid rgba(125, 249, 255, 0.1);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero::before {
@@ -469,8 +479,8 @@ nav a.active {
 }
 
 .hero h2, .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  margin-bottom: 1.2rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 0.8rem;
   background: linear-gradient(45deg, #00d4ff, #00a8cc, #b084ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -497,11 +507,11 @@ nav a.active {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgba(200, 220, 255, 0.9);
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.5;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -575,13 +585,13 @@ nav a.active {
 
 /* Category Cards */
 .categories {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .categories .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
   overflow: visible; /* allow card glows/borders to render fully */
   background: transparent; /* match site background */
 }
@@ -597,53 +607,68 @@ nav a.active {
   background: linear-gradient(145deg, rgba(12, 20, 44, .8), rgba(8, 14, 30, .7));
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 1.25rem 1.5rem;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   opacity: 0;
   transform: translateY(20px);
   box-shadow: var(--shadow);
   position: relative;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: auto;
+  overflow: hidden;
 }
 
 .category-card::before {
   content: "";
   position: absolute;
   inset: -2px;
-  border-radius: 22px;
-  background: conic-gradient(from 135deg, rgba(0, 212, 255, .2), rgba(176, 132, 255, .2), rgba(255, 107, 157, .15), rgba(0, 212, 255, .2));
-  filter: blur(20px);
-  opacity: .8;
+  border-radius: 24px;
+  background: conic-gradient(from 135deg, rgba(0, 212, 255, .15), rgba(176, 132, 255, .15), rgba(255, 107, 157, .1), rgba(0, 212, 255, .15));
+  filter: blur(22px);
+  opacity: .6;
   z-index: -1;
+  transition: all 0.4s ease;
 }
 
 .category-card:hover {
-  transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.03);
-  border-color: rgba(0, 212, 255, .6);
-  background: linear-gradient(145deg, rgba(14, 24, 52, .9), rgba(9, 16, 34, .85));
-  box-shadow: var(--shadow-hover), var(--glow), 0 0 40px rgba(0, 212, 255, 0.4);
-  perspective: 1000px;
-  animation: neon-pulse 2s ease-in-out infinite alternate;
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(0, 212, 255, .8);
+  background: linear-gradient(145deg, rgba(14, 24, 52, .95), rgba(9, 16, 34, .9));
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, .7),
+    0 0 40px rgba(0, 212, 255, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.category-card:hover::before {
+  opacity: .8;
+  filter: blur(25px);
+  background: conic-gradient(from 135deg, rgba(0, 212, 255, .25), rgba(176, 132, 255, .25), rgba(255, 107, 157, .15), rgba(0, 212, 255, .25));
 }
 
 .category-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   background: linear-gradient(45deg, #00d4ff, #b084ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .category-card p {
   color: rgba(200, 220, 255, 0.85);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+  flex-grow: 1;
 }
 
 /* Buttons */
@@ -652,17 +677,17 @@ nav a.active {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(176, 132, 255, 0.15));
   color: #e6f0ff;
   padding: 0.875rem 1.75rem;
-  border-radius: 18px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 212, 255, .3);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(0, 212, 255, .2);
   cursor: pointer;
   text-align: center;
   position: relative;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .btn::before {
@@ -676,12 +701,12 @@ nav a.active {
   transition: left 0.5s ease;
 }
 .btn:hover {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(176, 132, 255, 0.25));
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(176, 132, 255, 0.3));
   color: white;
-  border-color: rgba(0, 212, 255, 0.6);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.3), inset 0 0 15px rgba(0, 212, 255, 0.2);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 212, 255, 0.8);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(0, 212, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 .btn:hover::before {
   left: 100%;
@@ -965,10 +990,11 @@ nav a.active {
   background: rgba(10, 20, 40, 0.7);
   border: none;
   margin: 1.5rem 0;
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  border-radius: 25px;
   border: 1px solid rgba(125, 249, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 .subnav::after{
   content: "";
@@ -991,35 +1017,34 @@ nav a.active {
 .subnav a {
   color: rgba(200, 220, 255, 0.85);
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 18px;
-  border: 1px solid rgba(125, 249, 255, 0.15);
-  background: rgba(15, 30, 60, 0.6);
-  transition: all 0.3s ease;
+  padding: 0.7rem 1.4rem;
+  border-radius: 20px;
+  border: 1px solid rgba(125, 249, 255, 0.1);
+  background: rgba(15, 30, 60, 0.4);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-weight: 500;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .subnav a:hover {
   color: #ffffff;
-  background: linear-gradient(135deg, rgba(125, 249, 255, 0.3), rgba(176, 132, 255, 0.2));
-  border-color: rgba(125, 249, 255, 0.4);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(125, 249, 255, 0.35), rgba(176, 132, 255, 0.25));
+  border-color: rgba(125, 249, 255, 0.6);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3), 0 0 10px rgba(0, 212, 255, 0.2);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Tool Grid */
 .tool-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  align-items: stretch; /* Ensure equal height per row */
-  justify-content: center; /* Center last row when not full */
-  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Default flexible basis so cards wrap nicely */
@@ -1093,7 +1118,7 @@ nav a.active {
 
 /* So text and lists don't push CTAs unevenly, reserve space by limiting paragraph height */
 .tool-card p {
-  min-height: 48px; /* 2 lines approx */
+  min-height: 32px; /* 2 lines approx */
 }
 
 /* Single-line title with brand chip preserved */
@@ -1124,8 +1149,8 @@ nav a.active {
 .tool-card {
   background: linear-gradient(145deg, rgba(12, 20, 44, .8), rgba(8, 14, 30, .7));
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 1.5rem;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   opacity: 0;
   transform: translateY(20px);
@@ -1134,37 +1159,46 @@ nav a.active {
   height: 100%;
   box-shadow: var(--shadow);
   position: relative;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
 }
 
 .tool-card::before {
   content: "";
   position: absolute;
   inset: -2px;
-  border-radius: 20px;
-  background: conic-gradient(from 120deg, rgba(0, 212, 255, .18), rgba(176, 132, 255, .18), rgba(255, 107, 157, .12), rgba(0, 212, 255, .18));
-  filter: blur(18px);
-  opacity: .75;
+  border-radius: 24px;
+  background: conic-gradient(from 120deg, rgba(0, 212, 255, .15), rgba(176, 132, 255, .15), rgba(255, 107, 157, .1), rgba(0, 212, 255, .15));
+  filter: blur(20px);
+  opacity: .6;
   z-index: -1;
+  transition: all 0.4s ease;
 }
 
 .tool-card:hover {
-  transform: translateY(-8px) rotateX(5deg) rotateY(5deg) scale(1.02);
-  border-color: rgba(0, 212, 255, .6);
-  background: linear-gradient(145deg, rgba(14, 24, 52, .9), rgba(9, 16, 34, .85));
-  box-shadow: var(--shadow-hover), var(--glow), 0 0 40px rgba(0, 212, 255, 0.4);
-  perspective: 1000px;
-  animation: neon-pulse 2s ease-in-out infinite alternate;
+  transform: translateY(-12px) scale(1.03);
+  border-color: rgba(0, 212, 255, .8);
+  background: linear-gradient(145deg, rgba(14, 24, 52, .95), rgba(9, 16, 34, .9));
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, .8),
+    0 0 60px rgba(0, 212, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tool-card:hover::before {
+  opacity: .9;
+  filter: blur(25px);
+  background: conic-gradient(from 120deg, rgba(0, 212, 255, .25), rgba(176, 132, 255, .25), rgba(255, 107, 157, .15), rgba(0, 212, 255, .25));
 }
 
 /* Enhanced tool card header with icon support */
 .tool-card h4 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--ink);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   font-weight: 600;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
@@ -1204,15 +1238,16 @@ nav a.active {
 
 .tool-card p {
   color: var(--muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .tool-card ul {
-  margin: 1.25rem 0;
-  padding-left: 1.2rem;
+  margin: 0.75rem 0;
+  padding-left: 1rem;
   color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .tool-card ul li {
@@ -1231,17 +1266,18 @@ nav a.active {
   display: inline-block;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(176, 132, 255, 0.15));
   color: #00d4ff;
-  padding: 0.35rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 8px rgba(0, 212, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .tool-card .tag.featured-tag {
@@ -1289,14 +1325,14 @@ nav a.active {
 .tool-card .latency {
   color: var(--accent);
   font-weight: bold;
-  margin: 0.5rem 0 0.25rem;
-  font-size: 1.1rem;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
   text-shadow: 0 0 10px rgba(0, 212, 255, .4);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   position: relative;
   display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 16px;
   background: rgba(0, 212, 255, 0.1);
   border: 1px solid rgba(0, 212, 255, 0.3);
 }
@@ -1314,11 +1350,11 @@ nav a.active {
   display: inline-block;
   background: linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 212, 255, 0.1));
   color: var(--ok);
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin: 0.25rem 0 1rem;
+  margin: 0.25rem 0 0.75rem;
   border: 1px solid rgba(0, 255, 148, .3);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1333,16 +1369,35 @@ nav a.active {
   letter-spacing: normal;
 }
 
+/* Autonomy level styling based on text content */
+.tool-card .autonomy[data-level="high"],
+.tool-card .autonomy.high {
+  background: linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 212, 255, 0.1));
+  color: var(--ok);
+  border-color: rgba(0, 255, 148, .3);
+}
+
+.tool-card .autonomy[data-level="medium"],
 .tool-card .autonomy.medium {
   background: linear-gradient(135deg, rgba(255, 184, 77, 0.15), rgba(255, 159, 11, 0.1));
   color: var(--warn);
   border-color: rgba(255, 184, 77, .3);
 }
 
+.tool-card .autonomy[data-level="low"],
 .tool-card .autonomy.low {
   background: linear-gradient(135deg, rgba(255, 87, 87, 0.15), rgba(239, 68, 68, 0.1));
   color: var(--danger);
   border-color: rgba(255, 87, 87, .3);
+}
+
+.tool-card .autonomy[data-level="semi"],
+.tool-card .autonomy[data-level="assistive"],
+.tool-card .autonomy.semi,
+.tool-card .autonomy.assistive {
+  background: linear-gradient(135deg, rgba(176, 132, 255, 0.15), rgba(176, 132, 255, 0.1));
+  color: var(--accent-2);
+  border-color: rgba(176, 132, 255, .3);
 }
 
 /* Performance indicators layout */
@@ -1541,6 +1596,8 @@ a[target="_blank"]:not(.btn):not(.cta-link):hover::after {
 .btn-external:active {
   transform: translateY(-1px) scale(0.98);
 }
+
+
 
 /* Contact Page Styles */
 .contact-content {
@@ -1946,3 +2003,680 @@ footer a:hover {
 
 /* Keep featured content above decorative layers */
 .featured .container { position: relative; z-index: 1; }
+
+/* Search functionality styles */
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#tool-search {
+  width: 320px;
+  max-width: 90vw;
+  background: rgba(12, 20, 44, .85);
+  color: var(--ink);
+  border: 1px solid rgba(125, 249, 255, .3);
+  border-radius: 24px;
+  padding: 10px 16px;
+  outline: none;
+  backdrop-filter: blur(12px);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(125, 249, 255, .1);
+}
+
+#tool-search:focus {
+  border-color: rgba(125, 249, 255, .6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(125, 249, 255, .2), 0 0 0 2px rgba(125, 249, 255, .25);
+  background: rgba(14, 24, 52, .9);
+}
+
+#search-suggestions {
+  margin: 20px 0;
+}
+
+#search-suggestions .tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+#search-suggestions .tool-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+#search-suggestions .tool-card:hover {
+  background: var(--panel-2);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+#no-results {
+  text-align: center;
+  color: var(--muted);
+  margin: 20px 0;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Search highlighting */
+mark {
+  background: rgba(0, 212, 255, 0.3);
+  color: var(--ink);
+  padding: 2px 4px;
+  border-radius: 4px;
+}/* Addi
+tional Performance Optimizations */
+
+/* Reduce animations on low-end devices */
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .reduced-animations * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'System';
+  src: local('system-ui'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto');
+  font-display: swap;
+}
+
+/* Critical CSS inlining hint */
+.above-fold {
+  contain: layout style paint;
+}
+
+/* Optimize repaints */
+.tool-card {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.tool-card:hover {
+  will-change: auto;
+}
+
+/* Optimize scrolling performance */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* GPU acceleration for animations */
+.neon-pulse {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Lazy loading styles */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+/* Optimize search suggestions */
+#search-suggestions {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Reduce layout thrashing */
+.tool-grid {
+  contain: layout style;
+}
+
+/* Optimize for Core Web Vitals */
+.hero {
+  contain: layout style paint;
+}
+
+/* Preload critical fonts */
+.font-preload {
+  font-display: swap;
+}/* 
+Breadcrumb Navigation - Ensure consistent horizontal layout */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb ol {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0;
+}
+
+.breadcrumb li {
+    display: inline-flex !important;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '›';
+    margin: 0 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-2);
+    text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+/* Mobile breadcrumb optimization */
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+    
+    .breadcrumb li:not(:last-child)::after {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+}/
+* Compact Layout Improvements */
+
+/* Tighter spacing for better content density */
+.content {
+  padding: 1rem 0;
+}
+
+.content .container {
+  padding: 0 1rem;
+}
+
+/* More efficient grid layouts */
+@media (min-width: 1400px) {
+  .tool-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .tool-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .tool-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .tool-card {
+    padding: 1rem;
+  }
+  
+  .hero {
+    padding: 1.5rem 0 1rem 0;
+  }
+  
+  .categories {
+    padding: 1rem 0;
+  }
+  
+  .category-card {
+    padding: 1.25rem;
+  }
+}
+
+/* Reduce excessive whitespace */
+.featured {
+  margin-bottom: 1.5rem;
+}
+
+.category-intro {
+  margin-bottom: 1rem;
+}
+
+.category-intro h3 {
+  margin-bottom: 0.5rem;
+}
+
+.category-intro p {
+  margin-bottom: 0.75rem;
+}
+
+/* Compact button styling */
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* Tighter subnav */
+.subnav {
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+}
+
+.subnav a {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Compact breadcrumbs */
+.breadcrumb {
+  padding: 0.75rem 0;
+}
+
+/* Reduce footer spacing */
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0 1.5rem;
+}
+
+/* Performance indicators inline layout */
+.performance-indicators {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.tool-card .latency,
+.tool-card .autonomy {
+  margin: 0;
+}
+
+/* Compact tag styling */
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* List improvements */
+.tool-card li {
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+/* Reduce excessive animation distances */
+.tool-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}/* C
+ompact Category Card Styling */
+.category-card .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Responsive category cards - even more compact on smaller screens */
+@media (max-width: 768px) {
+  .category-card {
+    padding: 0.75rem 1rem;
+  }
+  
+  .category-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .category-card p {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .category-card .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .categories .container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/* Remove excessive glow effects from category cards */
+.category-card::before {
+  filter: blur(15px);
+  opacity: 0.6;
+}/* Enh
+anced Quick Navigation Styling */
+.subnav {
+  background: rgba(8, 16, 35, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(125, 249, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+}
+
+.subnav .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subnav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(12, 20, 44, 0.8);
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(125, 249, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.subnav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.subnav a:hover {
+  color: var(--accent);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(14, 24, 52, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
+}
+
+.subnav a:hover::before {
+  left: 100%;
+}
+
+.subnav a.active {
+  color: var(--accent);
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+}
+
+.subnav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* Mobile responsive quicknav */
+@media (max-width: 768px) {
+  .subnav {
+    padding: 0.5rem 0;
+  }
+  
+  .subnav .container {
+    padding: 0 1rem;
+    gap: 0.25rem;
+  }
+  
+  .subnav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section highlight animation */
+.category-intro {
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: -1rem;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.9), rgba(176, 132, 255, 0.8));
+  color: white;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 1), rgba(176, 132, 255, 0.9));
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(0, 212, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}/* Stand
+ardized Transitions and Animations */
+
+/* Override inconsistent transitions with standard 0.3s ease */
+.tool-card,
+.category-card,
+.btn,
+nav a,
+.subnav a,
+.breadcrumb a,
+.back-to-top,
+.tag,
+.latency,
+.autonomy {
+  transition: all 0.3s ease !important;
+}
+
+/* Consistent hover transforms */
+.tool-card:hover {
+  transform: translateY(-4px) scale(1.01) !important;
+}
+
+.category-card:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+}
+
+.btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Consistent animation durations */
+.neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite !important;
+}
+
+/* Ensure all cards have consistent structure */
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.tool-card h4 {
+  order: 1;
+}
+
+.tool-card .tag {
+  order: 2;
+}
+
+.tool-card p {
+  order: 3;
+}
+
+.tool-card .latency {
+  order: 4;
+}
+
+.tool-card .autonomy {
+  order: 5;
+}
+
+.tool-card ul {
+  order: 6;
+  flex-grow: 1;
+}
+
+.tool-card .btn,
+.tool-card a[target="_blank"] {
+  order: 7;
+  margin-top: auto;
+}
+
+/* Consistent back-to-top button placement */
+.back-to-top {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  z-index: 1000 !important;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+}
+
+/* Ensure consistent spacing */
+.tool-card > * {
+  margin-bottom: 0.75rem;
+}
+
+.tool-card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Performance indicators consistent styling */
+.tool-card .latency,
+.tool-card .autonomy {
+  display: inline-block;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+/* Consistent button styling across all cards */
+.tool-card .btn-external {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+/*
+ FORCE OVERRIDE - Related Categories Background Fix */
+body section.related-categories,
+body .related-categories,
+html section.related-categories,
+html .related-categories {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Fix for Related Tools Section - Use Tool Cards for Consistency */
+.category-intro .tool-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 1.5rem !important;
+  margin-top: 2rem !important;
+}
