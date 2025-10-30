@@ -57,13 +57,10 @@
     </script>
 
     <link rel="stylesheet" href="css/style.css">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="AI Coding Hub">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="application-name" content="AI Coding Hub">
-    <meta name="msapplication-TileColor" content="#03050b">
-    <meta name="theme-color" content="#00d4ff">
-    
+
+    <!-- Theme Toggle - Load early to prevent flash -->
+    <script src="js/theme-toggle.js"></script>
+
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +71,6 @@
     <link rel="dns-prefetch" href="//cursor.sh">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="preload" href="js/search.js" as="script">
-    <meta name="theme-color" content="#1a1a1a">
     <meta name="color-scheme" content="dark light">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/">
     
@@ -130,31 +126,7 @@
       }
     }
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AI Coding Hub",
-      "description": "Comprehensive guide to the best AI coding tools for developers in 2025",
-      "url": "https://renegade2k6.github.io/ai-coding-hub/",
-      "author": {
-        "@type": "Person",
-        "name": "Renegade2k6"
-      },
-      "dateModified": "2025-10-21",
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://renegade2k6.github.io/ai-coding-hub/?search={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -403,28 +375,28 @@
 
         <section class="categories">
             <div class="container">
-                <div class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
-                    <h3 itemprop="name">CLI &amp; Terminal AI Tools</h3>
+                <div class="category-card" data-number="1" itemscope itemtype="https://schema.org/CollectionPage">
+                    <h3 itemprop="name">⌨️ CLI &amp; Terminal AI Tools</h3>
                     <p itemprop="description">Command-line tools and terminal AI assistants for coding. Compare the best AI CLI tools for developers including Claude Code, GitHub Copilot CLI, Gemini CLI, and Aider.</p>
                     <a href="pages/cli-tools.html" class="btn" itemprop="url">Explore CLI &amp; Terminal</a>
                 </div>
-                <div class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
-                    <h3 itemprop="name">AI-Powered IDEs & Extensions</h3>
+                <div class="category-card" data-number="2" itemscope itemtype="https://schema.org/CollectionPage">
+                    <h3 itemprop="name">💻 AI-Powered IDEs & Extensions</h3>
                     <p itemprop="description">AI-powered IDEs and editor extensions. Find the best AI IDEs like Cursor, Qoder, Windsurf, and coding extensions for VS Code, JetBrains, and other editors.</p>
                     <a href="pages/ides.html" class="btn" itemprop="url">Explore IDEs &amp; Extensions</a>
                 </div>
-                <div class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
-                    <h3 itemprop="name">Local &amp; Self-Hosted AI</h3>
+                <div class="category-card" data-number="3" itemscope itemtype="https://schema.org/CollectionPage">
+                    <h3 itemprop="name">🏠 Local &amp; Self-Hosted AI</h3>
                     <p itemprop="description">Run AI coding models locally with privacy and control. Compare Ollama, LM Studio, GPT4All, and other local AI runtimes for development.</p>
                     <a href="pages/local-runtimes.html" class="btn" itemprop="url">Explore Local &amp; Self-Hosted</a>
                 </div>
-                <div class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
-                    <h3 itemprop="name">Cloud, RAG &amp; DevOps AI Tools</h3>
+                <div class="category-card" data-number="4" itemscope itemtype="https://schema.org/CollectionPage">
+                    <h3 itemprop="name">☁️ Cloud, RAG &amp; DevOps AI Tools</h3>
                     <p itemprop="description">RAG frameworks, AI model routers, testing, quality, and builder tools. Compare LangChain, LlamaIndex, and other cloud-based AI development solutions.</p>
                     <a href="pages/rag-tools.html" class="btn" itemprop="url">Explore Cloud, RAG &amp; DevOps</a>
                 </div>
-                <div class="category-card" itemscope itemtype="https://schema.org/CollectionPage">
-                    <h3 itemprop="name">AI Agent Frameworks</h3>
+                <div class="category-card" data-number="5" itemscope itemtype="https://schema.org/CollectionPage">
+                    <h3 itemprop="name">🤖 AI Agent Frameworks</h3>
                     <p itemprop="description">Build and orchestrate AI agents for coding. Compare AutoGen, CrewAI, LangGraph, and other agent frameworks for autonomous coding workflows.</p>
                     <a href="pages/agent-frameworks.html" class="btn" itemprop="url">Explore Agent Frameworks</a>
                 </div>
@@ -435,6 +407,8 @@
 
     
 
+    <script src="js/scroll-progress.js"></script>
+    <script src="js/tool-quick-actions.js" defer></script>
     <script src="js/performance.js" defer></script>
     <script src="js/components/header.js" defer></script>
     <script src="js/components/loader.js" defer></script>
