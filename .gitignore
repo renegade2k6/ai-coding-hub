@@ -19,6 +19,8 @@
 !index.html
 !robots.txt
 !sitemap.xml
+!google*.html
+!.nojekyll
 
 # Always ignore these
 .DS_Store
