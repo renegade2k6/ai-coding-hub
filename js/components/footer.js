@@ -10,6 +10,7 @@ class FooterComponent {
             <footer>
                 <div class="container">
                     <p>&copy; 2025 AI Coding Hub. All rights reserved.</p>
+                    <p><small>Last Updated: <time datetime="2025-10-30">October 30, 2025</time></small></p>
                     <p>Created by <a href="https://www.patreon.com/renegade2k6UK" target="_blank">Renegade2k6</a></p>
                     <p>Follow on <a href="https://x.com/Renegade2k6News" target="_blank">X</a> | <a href="https://www.facebook.com/ren2k6" target="_blank">Facebook</a></p>
                     <div class="disclaimer">
