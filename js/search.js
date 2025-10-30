@@ -428,3 +428,155 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// ====== ENHANCED SEARCH FILTERS ======
+(function() {
+    const FILTERS = [
+        { id: 'oss', label: 'Open Source', icon: '✅' },
+        { id: 'free', label: 'Free Tier', icon: '💰' },
+        { id: 'high-autonomy', label: 'High Autonomy', icon: '🚀' },
+        { id: 'local', label: 'Local-first', icon: '💻' },
+        { id: 'cloud', label: 'Cloud-based', icon: '☁️' }
+    ];
+
+    let activeFilters = new Set();
+    
+    // Wait for search container to be created
+    setTimeout(() => {
+        const searchContainer = document.querySelector('.search-container');
+        if (!searchContainer || !document.querySelector('.tool-card')) return;
+        
+        tagToolCards();
+        const counts = calculateCounts();
+        createFilterUI(searchContainer, counts);
+        setupFilterListeners();
+    }, 100);
+
+    function tagToolCards() {
+        document.querySelectorAll('.tool-card').forEach(card => {
+            const text = card.textContent.toLowerCase();
+            const autonomy = card.querySelector('.autonomy')?.textContent.toLowerCase() || '';
+            
+            // Tag cards with filter attributes
+            if (text.includes('oss') || text.includes('open source') || card.querySelector('a[href*="github.com"]')) {
+                card.dataset.oss = 'true';
+            }
+            if (text.includes('free') || text.includes('$0')) {
+                card.dataset.free = 'true';
+            }
+            if (autonomy.includes('high')) {
+                card.dataset.highAutonomy = 'true';
+            }
+            if (text.includes('local') || text.includes('self-hosted') || text.includes('offline')) {
+                card.dataset.local = 'true';
+            }
+            if (text.includes('cloud') || text.includes('api') || text.includes('hosted')) {
+                card.dataset.cloud = 'true';
+            }
+        });
+    }
+
+    function calculateCounts() {
+        return {
+            oss: document.querySelectorAll('.tool-card[data-oss="true"]').length,
+            free: document.querySelectorAll('.tool-card[data-free="true"]').length,
+            'high-autonomy': document.querySelectorAll('.tool-card[data-high-autonomy="true"]').length,
+            local: document.querySelectorAll('.tool-card[data-local="true"]').length,
+            cloud: document.querySelectorAll('.tool-card[data-cloud="true"]').length
+        };
+    }
+
+    function createFilterUI(searchContainer, counts) {
+        const filtersDiv = document.createElement('div');
+        filtersDiv.className = 'search-filters';
+        filtersDiv.id = 'search-filters';
+
+        FILTERS.forEach(filter => {
+            const count = counts[filter.id];
+            if (count === 0) return;
+
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'filter-chip';
+            chip.dataset.filterId = filter.id;
+            chip.innerHTML = `<span class="icon">${filter.icon}</span> ${filter.label} <span class="count">${count}</span>`;
+            chip.addEventListener('click', () => toggleFilter(chip));
+            filtersDiv.appendChild(chip);
+        });
+
+        // Clear button
+        const clearBtn = document.createElement('button');
+        clearBtn.type = 'button';
+        clearBtn.className = 'filter-chip clear-filters';
+        clearBtn.id = 'clear-filters';
+        clearBtn.style.display = 'none';
+        clearBtn.innerHTML = '✕ Clear Filters';
+        clearBtn.addEventListener('click', clearFilters);
+        filtersDiv.appendChild(clearBtn);
+
+        searchContainer.parentNode.insertBefore(filtersDiv, searchContainer.nextSibling);
+    }
+
+    function toggleFilter(chip) {
+        const id = chip.dataset.filterId;
+        if (activeFilters.has(id)) {
+            activeFilters.delete(id);
+            chip.classList.remove('active');
+        } else {
+            activeFilters.add(id);
+            chip.classList.add('active');
+        }
+        applyFilters();
+        document.getElementById('clear-filters').style.display = activeFilters.size > 0 ? 'inline-flex' : 'none';
+    }
+
+    function clearFilters() {
+        activeFilters.clear();
+        document.querySelectorAll('.filter-chip.active').forEach(c => c.classList.remove('active'));
+        applyFilters();
+        document.getElementById('clear-filters').style.display = 'none';
+    }
+
+    function applyFilters() {
+        if (activeFilters.size === 0) {
+            document.querySelectorAll('.tool-card').forEach(c => c.classList.remove('hidden'));
+            return;
+        }
+
+        document.querySelectorAll('.tool-card').forEach(card => {
+            let matches = true;
+            for (const id of activeFilters) {
+                const attr = id === 'high-autonomy' ? 'highAutonomy' : id;
+                if (card.dataset[attr] !== 'true') {
+                    matches = false;
+                    break;
+                }
+            }
+            card.classList.toggle('hidden', !matches);
+        });
+
+        // Hide empty sections
+        document.querySelectorAll('.content .container').forEach(section => {
+            section.querySelectorAll('.tool-grid').forEach(grid => {
+                const hasVisible = Array.from(grid.querySelectorAll('.tool-card')).some(c => !c.classList.contains('hidden'));
+                grid.classList.toggle('hidden', !hasVisible);
+                const intro = grid.previousElementSibling;
+                if (intro?.classList.contains('category-intro')) {
+                    intro.classList.toggle('hidden', !hasVisible);
+                }
+            });
+        });
+
+        window.dispatchEvent(new Event('resize'));
+    }
+
+    function setupFilterListeners() {
+        // Integrate with existing search
+        const searchInput = document.getElementById('tool-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                setTimeout(applyFilters, 200);
+            });
+        }
+    }
+})();

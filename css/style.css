@@ -2680,3 +2680,304 @@ html .related-categories {
   gap: 1.5rem !important;
   margin-top: 2rem !important;
 }
+/* ====== SEO and Performance Optimizations (Merged from seo-performance.css) ====== */
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+    font-size: 14px;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Performance - Reduce layout shift */
+.tool-card {
+    contain: layout style paint;
+}
+
+/* Loading states to prevent CLS */
+.tool-grid {
+    min-height: 250px;
+}
+
+/* Optimize images for Core Web Vitals */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Lazy loading placeholder */
+.lazy-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tool-card {
+        border: 2px solid;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles for SEO */
+@media print {
+    nav, .skip-link, .divider {
+        display: none;
+    }
+    
+    .tool-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+    /* Reduce complexity on mobile */
+    .logo div[style*="conic-gradient"] {
+        background: var(--accent) !important;
+        filter: none !important;
+    }
+}
+
+/* Preload critical resources hints */
+.preload-hint {
+    display: none;
+}
+
+/* Breadcrumb navigation for SEO */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb ol {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto;
+}
+
+.breadcrumb li {
+    display: inline-flex !important;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin: 0 8px;
+    color: #666;
+    font-weight: normal;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+    color: #ccc;
+    display: inline;
+}
+
+/* Mobile breadcrumb */
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+}
+
+/* ====== Enhanced Search Filters ====== */
+
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(12, 20, 44, .85);
+    border: 1px solid rgba(125, 249, 255, .3);
+    border-radius: 24px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    user-select: none;
+}
+
+.filter-chip:hover {
+    background: rgba(14, 24, 52, .95);
+    border-color: rgba(125, 249, 255, .5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, .3);
+}
+
+.filter-chip.active {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(176, 132, 255, 0.2));
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 212, 255, .4), inset 0 0 10px rgba(0, 212, 255, .1);
+}
+
+.filter-chip .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    background: rgba(0, 212, 255, 0.2);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.filter-chip.active .count {
+    background: rgba(0, 212, 255, 0.3);
+    color: white;
+}
+
+.filter-chip .icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Clear filters button */
+.filter-chip.clear-filters {
+    background: rgba(255, 87, 87, 0.1);
+    border-color: rgba(255, 87, 87, 0.3);
+    color: #ff5757;
+}
+
+.filter-chip.clear-filters:hover {
+    background: rgba(255, 87, 87, 0.2);
+    border-color: rgba(255, 87, 87, 0.5);
+}
+
+/* Active filters count indicator */
+.active-filters-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background: var(--accent);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bg0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 212, 255, .5);
+}
+
+/* Mobile responsive filters */
+@media (max-width: 768px) {
+    .search-filters {
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .filter-chip {
+        padding: 0.5rem 1rem;
+        font-size: 13px;
+    }
+    
+    .filter-chip .count {
+        min-width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+}
+
+/* Filter results message */
+.filter-results-message {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 12px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.filter-results-message strong {
+    color: var(--accent);
+    font-weight: 600;
+}
