@@ -65,6 +65,48 @@
       }
     }
     </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between an AI IDE and an AI extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI IDE like Cursor or Windsurf is a complete development environment built from the ground up with AI capabilities integrated throughout, offering features like agentic workflows, full codebase awareness, and native AI integration. An AI extension like Cline or Continue.dev adds AI functionality to existing editors like VS Code, providing flexibility to enhance your current setup without switching entirely. IDEs typically offer deeper integration and more cohesive experiences, while extensions provide flexibility and the ability to keep your familiar editor setup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use multiple AI coding extensions together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can use multiple AI coding extensions together, though it requires careful configuration. Many developers combine different extensions for different purposes - for example, using GitHub Copilot for code completions alongside Cline for agentic tasks. However, be mindful of potential conflicts, overlapping keybindings, and performance impacts. It's best to start with one primary extension and add others as needed, ensuring they complement rather than duplicate functionality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI IDE or extension is best for beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For beginners, Cursor is an excellent choice as an AI IDE because it's built on VS Code (familiar interface) with powerful AI features that are intuitive to use. If you prefer extensions, GitHub Copilot offers the smoothest learning curve with straightforward code suggestions that help you learn as you code. Cline is also beginner-friendly for those wanting to explore agentic coding, with clear prompts and autonomous capabilities that guide you through development tasks. Start with free tiers to experiment before committing to paid plans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do AI IDEs work offline or require internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most AI IDEs and extensions require an internet connection because they rely on cloud-based AI models (like Claude, GPT-4, or Gemini) for their intelligence. However, some tools offer limited offline functionality - the base IDE/editor features work offline, but AI features are disabled. For truly offline AI coding, consider self-hosted solutions like Continue.dev with local models via Ollama, or Tabby which can run entirely on your infrastructure. These require more setup but provide full privacy and offline capabilities."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>

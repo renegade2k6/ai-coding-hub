@@ -32,6 +32,48 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/pages/local-runtimes.html">
     <script src="../js/components/header.js" defer></script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much RAM do I need to run AI models locally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAM requirements vary by model size. Small models (7B parameters) need 8-16GB RAM, medium models (13B) need 16-32GB, and large models (30B+) need 32GB+ RAM. For best performance, aim for 2x the model size in RAM. Tools like Ollama and LM Studio support quantization to reduce memory requirements. GPU VRAM can also be used - a 24GB GPU like RTX 4090 can run models up to 30B parameters efficiently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run AI models completely offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, tools like Ollama, llama.cpp, LM Studio, and Jan allow completely offline AI model usage. Once you download the model files (GGUF format for llama.cpp/Ollama), no internet connection is required. This ensures full privacy and data security. Initial setup requires downloading models (1-30GB+ depending on size), but after that, everything runs locally on your hardware without any external API calls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between Ollama and LM Studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ollama is a command-line tool optimized for developers who prefer terminal workflows, with simple CLI commands and API endpoints. LM Studio is a desktop GUI application designed for users who prefer visual interfaces, offering drag-and-drop model installation and chat interfaces. Both run models locally and support GGUF format. Ollama is better for automation and scripting, while LM Studio provides a more user-friendly experience for non-technical users. Performance is similar for both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do local AI runtimes work with Apple Silicon Macs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most local AI runtimes are optimized for Apple Silicon (M1/M2/M3/M4 chips). Tools like Ollama, llama.cpp, and LM Studio have native Apple Silicon support and leverage the unified memory architecture for excellent performance. Apple's Core ML provides additional optimization for on-device inference. Apple Silicon Macs with 16GB+ unified memory can efficiently run models up to 13B parameters, while 32GB+ can handle 30B+ models. Metal GPU acceleration further improves performance."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>

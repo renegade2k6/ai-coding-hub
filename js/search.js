@@ -456,22 +456,50 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tool-card').forEach(card => {
             const text = card.textContent.toLowerCase();
             const autonomy = card.querySelector('.autonomy')?.textContent.toLowerCase() || '';
-            
-            // Tag cards with filter attributes
+            const badges = [];
+
+            // Tag cards with filter attributes and collect badge info
             if (text.includes('oss') || text.includes('open source') || card.querySelector('a[href*="github.com"]')) {
                 card.dataset.oss = 'true';
+                badges.push({ id: 'oss', label: 'Open Source', icon: '✅' });
             }
             if (text.includes('free') || text.includes('$0')) {
                 card.dataset.free = 'true';
+                badges.push({ id: 'free', label: 'Free', icon: '💰' });
             }
+            // Don't show autonomy badge since it's already displayed in the card
             if (autonomy.includes('high')) {
                 card.dataset.highAutonomy = 'true';
+                // Skip adding autonomy badge - it's redundant
             }
             if (text.includes('local') || text.includes('self-hosted') || text.includes('offline')) {
                 card.dataset.local = 'true';
+                badges.push({ id: 'local', label: 'Local', icon: '💻' });
             }
             if (text.includes('cloud') || text.includes('api') || text.includes('hosted')) {
                 card.dataset.cloud = 'true';
+                badges.push({ id: 'cloud', label: 'Cloud', icon: '☁️' });
+            }
+
+            // Inject visual badges into card (if not already present)
+            if (badges.length > 0 && !card.querySelector('.tool-card-badges')) {
+                const badgeContainer = document.createElement('div');
+                badgeContainer.className = 'tool-card-badges';
+
+                badges.forEach(badge => {
+                    const badgeEl = document.createElement('span');
+                    badgeEl.className = `badge badge-${badge.id}`;
+                    badgeEl.innerHTML = `<span class="icon">${badge.icon}</span> ${badge.label}`;
+                    badgeContainer.appendChild(badgeEl);
+                });
+
+                // Insert badges after the tag element
+                const tag = card.querySelector('.tag');
+                if (tag && tag.nextSibling) {
+                    tag.parentNode.insertBefore(badgeContainer, tag.nextSibling);
+                } else if (tag) {
+                    tag.parentNode.appendChild(badgeContainer);
+                }
             }
         });
     }

@@ -32,6 +32,48 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="canonical" href="https://renegade2k6.github.io/ai-coding-hub/pages/agent-frameworks.html">
     <script src="../js/components/header.js" defer></script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AI agent framework?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI agent framework is a software library or platform that provides the infrastructure and tools to build autonomous AI agents that can perform complex tasks, make decisions, use tools, and interact with external systems. Popular frameworks like LangChain, AutoGen, and CrewAI offer features like memory management, tool usage, multi-agent collaboration, and workflow orchestration. These frameworks abstract away the complexity of building agent systems, allowing developers to focus on defining agent behaviors and goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which agent framework is best for beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For beginners, LangChain is often recommended due to its extensive documentation, large community, and straightforward API design. It provides pre-built templates and examples for common agent patterns. CrewAI is also beginner-friendly with its role-based approach and clear mental model of how agents work together. If you're working in the Microsoft ecosystem, Semantic Kernel offers excellent .NET and Python support with strong documentation. Start with simple single-agent projects before exploring multi-agent orchestration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need coding skills to use agent frameworks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional agent frameworks like LangChain, AutoGen, and LlamaIndex require programming skills (primarily Python, though some support other languages). However, no-code platforms like Zapier Agents, Gumloop, and HARPA AI allow you to build and deploy AI agents through visual interfaces without writing code. These platforms provide pre-built templates, drag-and-drop workflow builders, and natural language configuration. For maximum flexibility and customization, coding skills are beneficial, but no-code platforms can achieve many common use cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Model Context Protocol (MCP)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Model Context Protocol (MCP) is an open standard developed by Anthropic for safely connecting AI agents to external tools and data sources. It defines how AI assistants should interact with context servers (which provide data) and tools (which perform actions) in a secure, sandboxed manner. MCP enables features like file access, database queries, API integrations, and browser automation while maintaining security through permission controls. Major tools like Claude, Cursor, and Windsurf support MCP, making it easier to build consistent agent integrations across platforms."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>

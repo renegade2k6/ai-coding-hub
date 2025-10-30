@@ -1160,7 +1160,7 @@ nav a.active {
   box-shadow: var(--shadow);
   position: relative;
   backdrop-filter: blur(16px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .tool-card::before {
@@ -1323,50 +1323,62 @@ nav a.active {
 }
 
 .tool-card .latency {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.08));
+  border: 1px solid rgba(0, 212, 255, .4);
   color: var(--accent);
-  font-weight: bold;
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
-  text-shadow: 0 0 10px rgba(0, 212, 255, .4);
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 16px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  text-shadow: 0 0 8px rgba(0, 212, 255, .3);
+}
+
+.tool-card .latency:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(0, 212, 255, 0.15));
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .tool-card .latency::before {
   content: "⚡ Speed: ";
-  opacity: 0.8;
-  font-weight: 500;
-  letter-spacing: normal;
-  font-size: 0.85rem;
-  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.9;
 }
 
 .tool-card .autonomy {
-  display: inline-block;
-  background: linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 212, 255, 0.1));
-  color: var(--ok);
-  padding: 0.2rem 0.6rem;
-  border-radius: 16px;
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin: 0.25rem 0 0.75rem;
-  border: 1px solid rgba(0, 255, 148, .3);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(176, 132, 255, 0.15), rgba(176, 132, 255, 0.08));
+  border: 1px solid rgba(176, 132, 255, .4);
+  color: var(--accent-2);
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  margin: 0.25rem 0;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  position: relative;
+  text-shadow: 0 0 8px rgba(176, 132, 255, .3);
+}
+
+.tool-card .autonomy:hover {
+  background: linear-gradient(135deg, rgba(176, 132, 255, 0.25), rgba(176, 132, 255, 0.15));
+  box-shadow: 0 0 15px rgba(176, 132, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .tool-card .autonomy::before {
   content: "🤖 Autonomy: ";
-  opacity: 0.8;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: normal;
+  font-size: 0.75rem;
+  opacity: 0.9;
 }
 
 /* Autonomy level styling based on text content */
@@ -2619,6 +2631,289 @@ nav a,
 .tool-card a[target="_blank"] {
   order: 7;
   margin-top: auto;
+}
+
+/* ====== Enhanced Tool Card Badges ====== */
+.tool-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+  order: 2.5;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: rgba(12, 20, 44, .85);
+  border: 1px solid rgba(125, 249, 255, .2);
+  color: var(--muted);
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.badge:hover {
+  background: rgba(20, 30, 60, .9);
+  border-color: rgba(125, 249, 255, .4);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* Badge variants with neon colors */
+.badge.badge-oss {
+  background: linear-gradient(135deg, rgba(0, 255, 148, 0.15), rgba(0, 255, 148, 0.08));
+  border-color: rgba(0, 255, 148, .4);
+  color: var(--ok);
+}
+
+.badge.badge-oss:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 148, 0.25), rgba(0, 255, 148, 0.15));
+  box-shadow: 0 0 15px rgba(0, 255, 148, 0.3);
+}
+
+.badge.badge-free {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.08));
+  border-color: rgba(0, 212, 255, .4);
+  color: var(--accent);
+}
+
+.badge.badge-free:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(0, 212, 255, 0.15));
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.badge.badge-high-autonomy {
+  background: linear-gradient(135deg, rgba(176, 132, 255, 0.15), rgba(176, 132, 255, 0.08));
+  border-color: rgba(176, 132, 255, .4);
+  color: var(--accent-2);
+}
+
+.badge.badge-high-autonomy:hover {
+  background: linear-gradient(135deg, rgba(176, 132, 255, 0.25), rgba(176, 132, 255, 0.15));
+  box-shadow: 0 0 15px rgba(176, 132, 255, 0.3);
+}
+
+.badge.badge-local {
+  background: linear-gradient(135deg, rgba(255, 184, 77, 0.15), rgba(255, 184, 77, 0.08));
+  border-color: rgba(255, 184, 77, .4);
+  color: var(--warn);
+}
+
+.badge.badge-local:hover {
+  background: linear-gradient(135deg, rgba(255, 184, 77, 0.25), rgba(255, 184, 77, 0.15));
+  box-shadow: 0 0 15px rgba(255, 184, 77, 0.3);
+}
+
+.badge.badge-cloud {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(255, 107, 157, 0.08));
+  border-color: rgba(255, 107, 157, .4);
+  color: var(--accent-3);
+}
+
+.badge.badge-cloud:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.25), rgba(255, 107, 157, 0.15));
+  box-shadow: 0 0 15px rgba(255, 107, 157, 0.3);
+}
+
+/* Badge icons */
+.badge .icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+/* Enhanced card with badges visible */
+.tool-card:hover .badge {
+  transform: translateY(-2px);
+  border-color: currentColor;
+}
+
+/* ====== Related Categories Navigation Cards - Complete Redesign ====== */
+
+/* Navigation card container - compact horizontal layout */
+.tool-card:has(h4 a) {
+  cursor: pointer;
+  background: linear-gradient(135deg,
+    rgba(0, 212, 255, 0.05) 0%,
+    rgba(12, 20, 44, .7) 50%,
+    rgba(176, 132, 255, 0.05) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  min-height: auto;
+  height: auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animated border gradient */
+.tool-card:has(h4 a)::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg,
+    rgba(0, 212, 255, 0.3),
+    rgba(176, 132, 255, 0.3),
+    rgba(255, 107, 157, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.tool-card:has(h4 a):hover::before {
+  opacity: 1;
+}
+
+/* Icon container on the left */
+.tool-card:has(h4 a)::after {
+  content: "▶";
+  font-size: 1.5rem;
+  color: var(--accent);
+  opacity: 0.4;
+  transform: translateX(0) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  order: 3;
+  flex-shrink: 0;
+}
+
+.tool-card:has(h4 a):hover::after {
+  opacity: 1;
+  transform: translateX(8px) scale(1);
+  color: var(--ink);
+  text-shadow: 0 0 20px var(--accent);
+}
+
+/* Title styling - no nested structure needed */
+.tool-card:has(h4 a) h4 {
+  margin: 0;
+  padding: 0;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.tool-card:has(h4 a) h4 a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  display: block;
+}
+
+.tool-card:has(h4 a):hover h4 a {
+  color: var(--ink);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+/* Description text */
+.tool-card:has(h4 a) p {
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  opacity: 0.8;
+  order: 2;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.tool-card:has(h4 a):hover p {
+  opacity: 1;
+  color: var(--ink);
+}
+
+/* Hover state for entire navigation card */
+.tool-card:has(h4 a):hover {
+  background: linear-gradient(135deg,
+    rgba(0, 212, 255, 0.15) 0%,
+    rgba(12, 20, 44, .9) 50%,
+    rgba(176, 132, 255, 0.15) 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.3),
+    0 8px 32px rgba(0, 0, 0, .6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Compact related categories section - target by comment pattern */
+section.content:last-of-type {
+  padding: 0.5rem 0 1rem 0;
+  margin-top: 0;
+}
+
+section.content:last-of-type .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+section.content:last-of-type .category-intro {
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+section.content:last-of-type .category-intro h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+section.content:last-of-type .tool-grid {
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+section.content:last-of-type .tool-card {
+  min-height: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+}
+
+section.content:last-of-type .tool-card h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+section.content:last-of-type .tool-card p {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.tool-card:has(h4 a):hover {
+  background: linear-gradient(145deg, rgba(20, 30, 60, .8), rgba(12, 20, 44, .7));
+  border-color: var(--accent);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, .9),
+    0 0 80px rgba(0, 212, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.tool-card:has(h4 a):hover::before {
+  opacity: 1;
+  filter: blur(30px);
+  background: conic-gradient(from 120deg, rgba(0, 212, 255, .35), rgba(176, 132, 255, .35), rgba(255, 107, 157, .2), rgba(0, 212, 255, .35));
+}
+
+.tool-card:has(h4 a) p {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
 /* Consistent back-to-top button placement */
